@@ -207,3 +207,69 @@ Current pages:
 - Music Room
 - Quiz Arena
 - Fan Mail Office
+
+---
+
+### Images
+
+We see many websites containing images, right? Time to learn how to add them.
+
+Images are added using the `<img>` tag. It is a **self-closing tag**, meaning it does not require a closing tag.
+
+The most important attribute is `src`, which specifies the image file or location that should be displayed.
+
+Example:
+
+```html
+<img src="luffy.png">
+```
+
+We can also use the `width` and `height` attributes to resize an image.
+
+```html
+<img src="luffy.png" width="150">
+```
+
+- In most cases, specifying only the `width` or only the `height` is sufficient.
+- The other dimension is automatically adjusted according to the image's aspect ratio.
+- Setting both `width` and `height` may stretch or distort the image if the proportions do not match the original image.
+
+Another useful attribute is `alt` (**alternative text**).
+
+```html
+<img src="luffy.png" alt="Monkey D. Luffy">
+```
+
+The `alt` text serves two purposes:
+
+- If the image fails to load, the text can be displayed instead.
+- Screen readers can use the text to describe the image to visually impaired users.
+
+#### Bonus
+
+Images can also be used as hyperlinks by wrapping the `<img>` tag inside an anchor (`<a>`) tag.
+
+```html
+<a href="index.html">
+    <img src="luffy.png" alt="Monkey D. Luffy">
+</a>
+```
+
+GIFs can also be displayed using the `<img>` tag.
+
+```html
+<img src="luffy.gif" alt="Luffy GIF">
+```
+
+### Project Time 🚀
+
+Now that I have learned about images, I'll try to use them in my website.
+
+The best page to test this on is **The Crew Deck**, where I'll be:
+
+- Adding images of the Straw Hat Pirates.
+- Writing short descriptions for each crew member.
+- Learning how image sizing and alternative text work in practice.
+
+**Note:** I tried placing the crew descriptions beside their images, but I discovered that basic HTML is not well-suited for controlling page layouts. For now, the text will remain below the images. I'll revisit and improve the layout after learning CSS.
+
