@@ -273,3 +273,248 @@ The best page to test this on is **The Crew Deck**, where I'll be:
 
 **Note:** I tried placing the crew descriptions beside their images, but I discovered that basic HTML is not well-suited for controlling page layouts. For now, the text will remain below the images. I'll revisit and improve the layout after learning CSS.
 
+---
+
+### Audio
+
+Time to learn how to add audio to our webpages.
+
+Audio can be added using the `<audio></audio>` tag.
+
+Inside the `<audio>` tag, we use one or more `<source>` tags to specify the audio file that should be played.
+
+Example:
+
+```html
+<audio>
+    <source src="binks-sake.mp3">
+</audio>
+```
+
+However, this alone will not display any audio controls on the webpage.
+
+To make the audio player visible, add the `controls` attribute to the `<audio>` tag.
+
+```html
+<audio controls>
+    <source src="binks-sake.mp3">
+</audio>
+```
+
+This provides a built-in audio player with controls such as:
+
+- Play / Pause
+- Volume Control
+- Seek Bar
+- Playback Speed (browser-dependent)
+
+#### Useful Attributes
+
+**1. `autoplay`**
+
+Automatically starts playing the audio when the webpage loads.
+
+```html
+<audio controls autoplay>
+```
+
+> Most modern browsers restrict autoplay, especially when audio is not muted.
+
+**2. `muted`**
+
+Starts the audio in a muted state.
+
+```html
+<audio controls muted>
+```
+
+This is commonly used together with `autoplay`.
+
+**3. `loop`**
+
+Repeats the audio continuously after it finishes playing.
+
+```html
+<audio controls loop>
+```
+
+#### Multiple Sources (Fallback Support)
+
+Different browsers may support different audio formats.
+
+To improve compatibility, multiple `<source>` tags can be provided.
+
+```html
+<audio controls>
+    <source src="binks-sake.mp3" type="audio/mpeg">
+    <source src="binks-sake.wav" type="audio/wav">
+</audio>
+```
+
+The browser will attempt to play the first supported format.
+
+#### Fallback Text
+
+It is good practice to provide fallback text between the opening and closing audio tags.
+
+```html
+<audio controls>
+    <source src="binks-sake.mp3" type="audio/mpeg">
+    Your browser does not support audio playback.
+</audio>
+```
+
+This text will be displayed if the browser cannot play the audio.
+
+#### Notes
+
+
+- Both audio and video files can either be specified directly using the `src` attribute or through one or more `<source>` tags.
+- The `<audio>` tag supports multiple audio formats through multiple `<source>` tags.
+- The `controls` attribute is usually required so users can interact with the audio player.
+- Modern browsers often block unmuted `autoplay` to improve user experience.
+- Relative paths (e.g., `audio/binks-sake.mp3`) are preferred over absolute file paths (`C:/Users/...`).
+
+#### Layout Note
+
+The `<audio>` player and `<img>` tag can appear on the same line if there is enough horizontal space available.
+
+For example:
+
+```html
+<img src="cover.png" width="50">
+<audio controls>
+    <source src="binks_sake.mp3" type="audio/mpeg">
+</audio>
+```
+
+Unlike paragraph tags (`<p>`), these elements do not necessarily start on a new line. As a result, the browser may render them side by side.
+
+More advanced control over page layouts is typically achieved using CSS.
+
+### Project Time 🚀
+
+Time to build our 'Music Room' webpage, we will be adding the audio file, and a small image of brook (as a album cover) and also lyrics using our <pre></pre> tag, so that the viewers can sing along.
+
+---
+
+### Videos
+
+Adding videos to a webpage is very similar to adding audio.
+
+Videos can be added using the `<video></video>` tag.
+
+Example:
+
+```html
+<video controls>
+    <source src="video.mp4" type="video/mp4">
+</video>
+```
+
+To make the video player visible and interactive, add the `controls` attribute.
+
+```html
+<video controls>
+```
+
+This provides built-in controls such as:
+
+- Play / Pause
+- Volume Control
+- Seek Bar
+- Fullscreen Mode
+- Playback Speed (browser-dependent)
+
+#### Useful Attributes
+
+**1. `width`**
+
+Adjusts the displayed width of the video.
+
+```html
+<video controls width="500">
+```
+
+The height is automatically adjusted according to the video's aspect ratio.
+
+**2. `autoplay`**
+
+Automatically starts playing the video when the webpage loads.
+
+```html
+<video controls autoplay>
+```
+
+> Most modern browsers restrict autoplay, especially when audio is not muted.
+
+**3. `muted`**
+
+Starts the video in a muted state.
+
+```html
+<video controls muted>
+```
+
+Often used together with `autoplay`.
+
+**4. `loop`**
+
+Repeats the video continuously after it finishes playing.
+
+```html
+<video controls loop>
+```
+
+#### Multiple Sources (Fallback Support)
+
+Multiple video formats can be provided for better browser compatibility.
+
+```html
+<video controls>
+    <source src="video.mp4" type="video/mp4">
+    <source src="video.webm" type="video/webm">
+</video>
+```
+
+The browser will attempt to play the first supported format.
+
+#### Fallback Text
+
+```html
+<video controls>
+    <source src="video.mp4" type="video/mp4">
+    Your browser does not support video playback.
+</video>
+```
+
+This text is displayed if the browser cannot play the video.
+
+#### Bonus
+
+Videos can also be used as hyperlinks by wrapping the `<video>` tag inside an anchor (`<a>`) tag.
+
+```html
+<a href="index.html">
+    <video controls width="300">
+        <source src="video.mp4" type="video/mp4">
+    </video>
+</a>
+```
+
+#### Notes
+
+- Most concepts from the `<audio>` tag also apply to the `<video>` tag.
+- `controls`, `autoplay`, `muted`, `loop`, fallback sources, and MIME types work in a similar manner.
+- Relative paths are preferred over absolute file paths.
+
+### Project Time 🚀
+
+No changes will be made to **The Thousand Sunny** project for this section.
+
+The concepts learned for videos are largely identical to those used for audio, and adding copyrighted anime clips or episodes may introduce copyright concerns when publishing the project.
+
+For now, I will move on to the next topic and revisit videos later if needed.
+
+---
+
