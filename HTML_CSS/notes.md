@@ -108,7 +108,7 @@ To get started with the HTML code, we can just time '!' in vscode and then hit "
 
        World
    </pre>
-  ```
+   ```
 
 **Bonus**
 - In VS Code, typing `lorem` and pressing `Tab` generates dummy placeholder text (Lorem Ipsum).
@@ -119,5 +119,91 @@ To get started with the HTML code, we can just time '!' in vscode and then hit "
 This concludes the introduction to HTML. Time to build something.
 I have decided to create a **One Piece-themed webpage** and apply the concepts learned so far. Let's see how this turns out.
 
-**Commit #1**
+Website name is **"The Thousand Sunny"**.
+
 ---
+
+## DAY 2
+
+### Hyperlinks
+
+A hyperlink is a digital reference to another resource that a user can access by clicking on highlighted text.
+
+Hyperlinks are created using the `<a></a>` (**anchor**) tag.
+
+To create a hyperlink:
+
+- Place the clickable text between the opening and closing anchor tags.
+- Add the `href=""` (**Hypertext Reference**) attribute inside the opening `<a>` tag.
+- If the target file is in the same directory, simply use the file name.
+- If the target file is in a different directory, provide the relative path to that file.
+- If the target is a website, place the URL inside `href=""`.
+
+Example:
+
+```html
+<a href="index.html">Check My Website</a>
+```
+
+This will open `index.html` when clicked.
+
+External Website Example:
+
+```html
+<a href="https://www.google.com">Visit Google</a>
+```
+
+This will take the user to Google's website.
+
+#### Useful Attributes
+
+**1. `target="_blank"`**
+
+- Opens the linked page in a new browser tab.
+
+```html
+<a href="https://www.google.com" target="_blank">
+    Visit Google
+</a>
+```
+
+**2. `title=""`**
+
+- Displays a tooltip when the user hovers over the hyperlink.
+
+```html
+<a href="https://www.google.com" title="Opens Google's Homepage">
+    Visit Google
+</a>
+```
+
+#### Email Links (`mailto:`)
+
+The `mailto:` protocol can be used to open the user's default email application and compose an email.
+
+```html
+<a href="mailto:example@gmail.com">
+    Send Email
+</a>
+```
+
+When clicked, the user's email client opens with the recipient's email address already filled in.
+
+#### Note
+
+- You can wrap up an anchor with a header or paragraph tags too.
+
+- Prefer **relative paths** (`index.html`, `pages/crew.html`) over absolute paths (`file:///C:/...`) when building websites.
+- `file:///...` links work only on your local machine and cannot be used to share websites with others.
+- To share a website publicly, host it online (e.g., GitHub Pages) and use its URL.
+
+### Project Time 🚀
+
+So, now that I have learned about hyperlinks, I will try to connect the pages within my website and turn **The Thousand Sunny** into a proper multi-page website.
+
+Current pages:
+
+- The Crew Deck
+- Music Room
+- Quiz Arena
+- Fan Mail Office
