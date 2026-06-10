@@ -394,7 +394,7 @@ More advanced control over page layouts is typically achieved using CSS.
 
 ### Project Time 🚀
 
-Time to build our 'Music Room' webpage, we will be adding the audio file, and a small image of brook (as a album cover) and also lyrics using our <pre></pre> tag, so that the viewers can sing along.
+Time to build our 'Music Room' webpage, we will be adding the audio file, and a small image of brook (as a album cover) and also lyrics using our `<pre></pre>` tag, so that the viewers can sing along.
 
 ---
 
@@ -517,4 +517,64 @@ The concepts learned for videos are largely identical to those used for audio, a
 For now, I will move on to the next topic and revisit videos later if needed.
 
 ---
+
+## DAY 3
+
+### Favicons
+
+Favicons are the small icons that appear on a browser tab beside the webpage title.
+
+Since favicons are related to the webpage's metadata, they must be added inside the `<head>` section of the HTML document.
+
+Favicons are added using the `<link>` tag.
+
+Example:
+
+```html
+<link rel="icon" type="image/png" href="Assets/favicon.png">
+```
+
+#### Attributes
+
+**1. `rel="icon"`**
+
+Specifies that the linked file should be used as the webpage's favicon.
+
+**2. `type=""`**
+
+Specifies the image format of the favicon.
+
+Examples:
+
+```html
+type="image/png"
+type="image/jpeg"
+type="image/gif"
+type="image/x-icon"
+type="image/svg+xml"
+```
+
+**3. `href=""`**
+
+Specifies the relative path to the favicon file.
+
+```html
+href="Assets/favicon.png"
+```
+
+#### Notes
+
+- Favicons should be placed inside the `<head>` section.
+- Relative paths are preferred over absolute file paths.
+- Browsers may cache favicons aggressively, so changes may not appear immediately after updating the image.
+- The traditional favicon format is `.ico`, but modern browsers also support `.png`, `.jpg`, `.gif`, and `.svg` files.
+- Animated GIF favicons are supported by some browsers, but support is not guaranteed across all browsers.
+
+### Project Time 🚀
+
+Nothing much... just find some good icons for my webpages and gonna add them.
+
+---
+
+
 
