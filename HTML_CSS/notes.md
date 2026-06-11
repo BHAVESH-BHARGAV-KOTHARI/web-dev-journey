@@ -576,5 +576,363 @@ Nothing much... just find some good icons for my webpages and gonna add them.
 
 ---
 
+### Text Formatting
+
+HTML provides several tags that can be used to emphasize content, indicate importance, or improve the visual appearance of text.
+
+#### Common Formatting Tags
+
+**1. Bold Text**
+
+```html
+<b>Bold Text</b>
+```
+
+Displays the text in bold.
+
+**2. Italic Text**
+
+```html
+<i>Italic Text</i>
+```
+
+Displays the text in italics.
+
+**3. Underlined Text**
+
+```html
+<u>Underlined Text</u>
+```
+
+Displays the text with an underline.
+
+**4. Deleted Text**
+
+```html
+<del>Deleted Text</del>
+```
+
+Displays the text with a strikethrough.
+
+Example:
+
+```html
+Former Bounty: <del>100,000,000</del>
+```
+
+**5. Larger Text**
+
+```html
+<big>Big Text</big>
+```
+
+Displays slightly larger text.
+
+> Note: `<big>` is obsolete in modern HTML and is rarely used today.
+
+**6. Smaller Text**
+
+```html
+<small>Small Text</small>
+```
+
+Displays smaller text.
+
+**7. Subscript**
+
+```html
+H<sub>2</sub>O
+```
+
+Output:
+
+```text
+H₂O
+```
+
+Commonly used in chemical formulas.
+
+**8. Superscript**
+
+```html
+x<sup>2</sup>
+```
+
+Output:
+
+```text
+x²
+```
+
+Commonly used in mathematical expressions.
+
+**9. Monospaced Text**
+
+```html
+<tt>Monospaced Text</tt>
+```
+
+Displays text using a monospaced font (each character occupies the same width).
+
+Example:
+
+```text
+WWW
+iii
+```
+
+Normally these take different widths, but in a monospaced font every character occupies equal space.
+
+> Note: `<tt>` is obsolete in modern HTML. The `<code>` tag is usually preferred.
+
+**10. Highlighted Text**
+
+```html
+<mark>Highlighted Text</mark>
+```
+
+Highlights the text, usually with a yellow background.
+
+#### Bonus: A Small Peek Into CSS
+
+HTML elements can be styled using the `style` attribute.
+
+Example:
+
+```html
+<mark style="background-color: lightgreen">
+    Highlighted Text
+</mark>
+```
+
+This changes the highlight color from the default yellow to light green.
+
+Other examples:
+
+```html
+<p style="color: red">Red Text</p>
+
+<p style="background-color: black">
+    Background Color
+</p>
+```
+
+> CSS will be covered in much greater detail later. For now, it is enough to know that the `style` attribute can be used to customize the appearance of HTML elements.
+
+#### Notes
+
+- Formatting tags help improve readability and emphasize important content.
+- Some tags such as `<big>` and `<tt>` are considered obsolete in modern HTML.
+- CSS is generally preferred for controlling appearance, but basic formatting tags are still useful and commonly encountered.
+
+### Project Time 🚀
+
+Not much here either, [There isn't even much text to begin with]. Maybe for now I'll just sprinkle some formatting a bit.
+
+---
+
+### Span & Div
+
+The `<span>` and `<div>` tags are generic containers used to group HTML elements together, usually for styling or organization purposes.
+
+By themselves, they do not change the appearance of a webpage. Their usefulness becomes apparent when combined with CSS.
+
+#### Span
+
+The `<span>` tag is an **inline container**.
+
+It is used to style or group a small portion of text without breaking the flow of the surrounding content.
+
+Example:
+
+```html
+<p>
+    Monkey D. <span style="color: red">Luffy</span> is the captain.
+</p>
+```
+
+Output:
+
+```text
+Monkey D. Luffy is the captain.
+```
+
+Only the wrapped text is affected, and it remains on the same line as the surrounding text.
+
+---
+
+#### Div
+
+The `<div>` tag is a **block container**.
+
+It creates a separate block on the webpage and typically starts on a new line.
+
+Example:
+
+```html
+<div style="background-color: lightgray">
+    This is a separate section.
+</div>
+```
+
+Unlike `<span>`, a `<div>` occupies its own block of space.
+
+---
+
+#### Key Difference
+
+**`<span>`**
+
+- Inline container.
+- Remains within the current line of text.
+- Used for styling small portions of content.
+
+**`<div>`**
+
+- Block container.
+- Starts on a new line and occupies its own section.
+- Used for grouping larger sections of content.
+
+Example:
+
+```html
+<p>
+    I want to highlight
+    <span style="color:red">this text</span>
+    only.
+</p>
+
+<div style="background-color:lightyellow">
+    This entire section belongs together.
+</div>
+```
+
+#### Notes
+
+- Both `<span>` and `<div>` are primarily used with CSS.
+- They do not provide any visual changes on their own.
+- `<span>` is generally used for small pieces of content.
+- `<div>` is generally used for larger sections or layouts.
+
+#### Rule of Thumb
+
+- Use `<span>` for styling part of a line.
+- Use `<div>` for styling an entire section.
+- Lists, paragraphs, headings, and other block elements should generally be placed inside `<div>`, not `<span>`.
+
+### Project Time 🚀
+
+No changes will be made to **The Thousand Sunny** project for this section.
+
+While `<span>` and `<div>` are extremely useful, their real power comes from CSS. At this stage, adding them to the project would not provide much benefit and may even make the code unnecessarily cluttered.
+
+I will revisit these tags after learning CSS and use them to improve the website's layout and styling.
+
+---
+
+### Lists
+
+Lists are used to organize related items together.
+
+HTML provides three main types of lists.
+
+#### 1. Unordered Lists
+
+Unordered lists are used when the order of items does not matter.
+
+They are created using the `<ul>` tag, and each item is represented using the `<li>` (**List Item**) tag.
+
+Example:
+
+```html
+<ul>
+    <li>Luffy</li>
+    <li>Zoro</li>
+    <li>Nami</li>
+</ul>
+```
+
+Output:
+
+- Luffy
+- Zoro
+- Nami
+
+#### 2. Ordered Lists
+
+Ordered lists are used when the order of items is important.
+
+They are created using the `<ol>` tag, and each item is represented using the `<li>` tag.
+
+Example:
+
+```html
+<ol>
+    <li>East Blue</li>
+    <li>Grand Line</li>
+    <li>New World</li>
+</ol>
+```
+
+Output:
+
+1. East Blue
+2. Grand Line
+3. New World
+
+#### 3. Description Lists
+
+Description lists are used to represent terms and their descriptions.
+
+They are created using:
+
+- `<dl>` (**Description List**)
+- `<dt>` (**Description Term**)
+- `<dd>` (**Description Details**)
+
+Example:
+
+```html
+<dl>
+    <dt>Luffy</dt>
+    <dd>Captain of the Straw Hat Pirates.</dd>
+
+    <dt>Zoro</dt>
+    <dd>Swordsman of the crew.</dd>
+</dl>
+```
+
+#### Nested Lists
+
+Lists can be nested inside other lists.
+
+Example:
+
+```html
+<ul>
+    <li>Straw Hat Pirates
+        <ul>
+            <li>Luffy</li>
+            <li>Zoro</li>
+            <li>Nami</li>
+        </ul>
+    </li>
+</ul>
+```
+
+Nested lists are supported for both ordered and unordered lists.
+
+#### Notes
+
+- `<li>` tags are used inside both `<ul>` and `<ol>`.
+- `<dl>` lists use `<dt>` and `<dd>` instead of `<li>`.
+- Lists can be nested to create subcategories.
+- Lists are commonly used for navigation menus, item collections, and structured information.
+
+### Project Time 🚀
+
+Just added a bit of unordered lists in the 'crew' page.
+
+---
 
 
