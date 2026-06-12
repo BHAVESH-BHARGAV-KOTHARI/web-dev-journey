@@ -7,6 +7,108 @@
   <link rel="icon" type="image/jpg" href="Assets/favi4.jpg">
 </head>
 <body>
-  <h1>Quiz Time</h1>  
+  <h1>🏴‍☠️ One Piece Quiz Time 🏴‍☠️</h1>
+
+  <h3>1. What was the name of Gol D. Roger's ship?</h3>
+  <ol>
+    <li><button onclick="correct('ans1')">Oro Jackson</button></li>
+    <li><button onclick="wrong('ans1')">Thousand Sunny</button></li>
+    <li><button onclick="wrong('ans1')">Moby Dick</button></li>
+    <li><button onclick="wrong('ans1')">Red Force</button></li>
+  </ol>
+
+  <p id="ans1">Choose an answer!</p>
+
+  <h3>2. Which Straw Hat was the first to officially join Luffy?</h3>
+  <ol>
+    <li><button onclick="wrong('ans2')">Nami</button></li>
+    <li><button onclick="wrong('ans2')">Usopp</button></li>
+    <li><button onclick="correct('ans2')">Roronoa Zoro</button></li>
+    <li><button onclick="wrong('ans2')">Sanji</button></li>
+  </ol>
+  <p id="ans2">Choose an answer!</p>
+
+  <h3>3. What is Sanji's dream?</h3>
+  <ol>
+    <li><button onclick="wrong('ans3')">Become Pirate King</button></li>
+    <li><button onclick="correct('ans3')">Find the All Blue</button></li>
+    <li><button onclick="wrong('ans3')">Map the World</button></li>
+    <li><button onclick="wrong('ans3')">Become the Greatest Swordsman</button></li>
+  </ol>
+  <p id="ans3">Choose an answer!</p>
+
+  <h3>4. Which Devil Fruit did Portgas D. Ace possess?</h3>
+  <ol>
+    <li><button onclick="wrong('ans4')">Goro Goro no Mi</button></li>
+    <li><button onclick="wrong('ans4')">Magu Magu no Mi</button></li>
+    <li><button onclick="correct('ans4')">Mera Mera no Mi</button></li>
+    <li><button onclick="wrong('ans4')">Hie Hie no Mi</button></li>
+  </ol>
+  <p id="ans4">Choose an answer!</p>
+
+  <h3>5. What is the name of Zoro's three-sword fighting style?</h3>
+  <ol>
+    <li><button onclick="wrong('ans5')">Nitoryu</button></li>
+    <li><button onclick="correct('ans5')">Santoryu</button></li>
+    <li><button onclick="wrong('ans5')">Kyutoryu</button></li>
+    <li><button onclick="wrong('ans5')">Ittoryu</button></li>
+  </ol>
+  <p id="ans5">Choose an answer!</p>
+
+  <h3>6. Which island was Nico Robin originally from?</h3>
+  <ol>
+    <li><button onclick="wrong('ans6')">Dressrosa</button></li>
+    <li><button onclick="wrong('ans6')">Water 7</button></li>
+    <li><button onclick="correct('ans6')">Ohara</button></li>
+    <li><button onclick="wrong('ans6')">Alabasta</button></li>
+  </ol>
+  <p id="ans6">Choose an answer!</p>
+
+  <h3>7. Who taught Luffy Haki during the time skip?</h3>
+  <ol>
+    <li><button onclick="wrong('ans7')">Shanks</button></li>
+    <li><button onclick="wrong('ans7')">Monkey D. Garp</button></li>
+    <li><button onclick="correct('ans7')">Silvers Rayleigh</button></li>
+    <li><button onclick="wrong('ans7')">Monkey D. Dragon</button></li>
+  </ol>
+  <p id="ans7">Choose an answer!</p>
+
+  <h3>8. What is the name of the Straw Hats' current ship?</h3>
+  <ol>
+    <li><button onclick="wrong('ans8')">Going Merry</button></li>
+    <li><button onclick="correct('ans8')">Thousand Sunny</button></li>
+    <li><button onclick="wrong('ans8')">Polar Tang</button></li>
+    <li><button onclick="wrong('ans8')">Red Force</button></li>
+  </ol>
+  <p id="ans8">Choose an answer!</p>
+
+  <h3>9. Which Yonko possessed a Road Poneglyph in Whole Cake Island?</h3>
+  <ol>
+    <li><button onclick="wrong('ans9')">Kaido</button></li>
+    <li><button onclick="wrong('ans9')">Shanks</button></li>
+    <li><button onclick="correct('ans9')">Big Mom</button></li>
+    <li><button onclick="wrong('ans9')">Whitebeard</button></li>
+  </ol>
+  <p id="ans9">Choose an answer!</p>
+
+  <h3>10. What is the true name of Luffy's Devil Fruit?</h3>
+  <ol>
+    <li><button onclick="wrong('ans10')">Gomu Gomu no Mi</button></li>
+    <li><button onclick="wrong('ans10')">Nika Nika no Mi</button></li>
+    <li><button onclick="correct('ans10')">Hito Hito no Mi, Model: Nika</button></li>
+    <li><button onclick="wrong('ans10')">Mochi Mochi no Mi</button></li>
+  </ol>
+  <p id="ans10">Choose an answer!</p>
+
+  <script>
+    function correct(id) {
+    document.getElementById(id).textContent = "✅ Correct!";
+  }
+
+  function wrong(id) {
+      document.getElementById(id).textContent = "❌ Wrong!";
+  }
+  </script>
+
 </body>
 </html>

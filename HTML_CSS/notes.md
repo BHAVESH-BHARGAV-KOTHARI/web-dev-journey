@@ -576,6 +576,8 @@ Nothing much... just find some good icons for my webpages and gonna add them.
 
 ---
 
+## DAY 4
+
 ### Text Formatting
 
 HTML provides several tags that can be used to emphasize content, indicate importance, or improve the visual appearance of text.
@@ -935,4 +937,364 @@ Just added a bit of unordered lists in the 'crew' page.
 
 ---
 
+### Tables
 
+Tables are used to organize data into rows and columns.
+
+A table is created using the `<table>` tag.
+
+#### Table Rows
+
+Each row in a table is represented using the `<tr>` (**Table Row**) tag.
+
+```html
+<tr>
+</tr>
+```
+
+#### Table Headers
+
+Table headers are represented using the `<th>` (**Table Header**) tag.
+
+Headers are typically used in the first row of a table to indicate the meaning of each column.
+
+```html
+<th>Name</th>
+<th>Role</th>
+<th>Bounty</th>
+```
+
+By default, header text is displayed in bold and centered.
+
+#### Table Data
+
+Table data is represented using the `<td>` (**Table Data**) tag.
+
+```html
+<td>Luffy</td>
+<td>Captain</td>
+<td>3,000,000,000</td>
+```
+
+These cells contain the actual data that appears under the headers.
+
+#### Basic Example
+
+```html
+<table border="1">
+
+    <tr>
+        <th>Name</th>
+        <th>Role</th>
+        <th>Bounty</th>
+    </tr>
+
+    <tr>
+        <td>Luffy</td>
+        <td>Captain</td>
+        <td>3,000,000,000</td>
+    </tr>
+
+</table>
+```
+
+#### Useful Attributes
+
+**1. `border`**
+
+Controls the thickness of the table border.
+
+```html
+<table border="1">
+```
+
+Examples:
+
+```html
+border="0"
+border="1"
+border="2"
+border="5"
+```
+
+Larger values create thicker borders.
+
+> Note: The `border` attribute is mainly used for learning purposes. Modern websites usually use CSS for table borders.
+
+**2. `align`**
+
+Can be used to align text inside cells.
+
+```html
+<td align="center">Luffy</td>
+```
+
+Possible values:
+
+```html
+left
+center
+right
+```
+
+> Note: `align` is considered obsolete in modern HTML and is usually replaced by CSS.
+
+**3. `width` and `height`**
+
+Can be used on table cells to help create a more uniform appearance.
+
+```html
+<th width="200">Name</th>
+```
+
+#### Styling with CSS
+
+Colors can be applied using the `style` attribute.
+
+```html
+<th style="background-color: gold">
+    Bounty
+</th>
+```
+
+Example:
+
+```html
+<td style="background-color: lightblue">
+    Navigator
+</td>
+```
+
+#### Tables Can Contain Other Elements
+
+Table cells can contain many HTML elements, including:
+
+- Images
+- Hyperlinks
+- Lists
+- Audio
+- Videos
+- Paragraphs
+
+Example:
+
+```html
+<td>
+    <img src="luffy.png" width="100">
+</td>
+```
+
+This allows tables to be used for more complex layouts.
+
+#### Notes
+
+- `<table>` creates the table.
+- `<tr>` creates a row.
+- `<th>` creates a header cell.
+- `<td>` creates a data cell.
+- Tables are best used for tabular data.
+- Modern websites generally use CSS for layouts instead of tables.
+
+### Project Time 🚀
+
+Finally some major improment to the website...
+
+One possible improvement for **The Crew Deck** page is to place each crew member's wanted poster in one column and their description in another. This would allow the text to appear beside the image instead of below it.
+
+---
+## DAY 5
+
+### Buttons
+
+Buttons can be created using the `<button></button>` tag.
+
+The text placed between the opening and closing button tags will appear on the button.
+
+Example:
+
+```html
+<button>Click Me</button>
+```
+
+By default, buttons do not perform any action. They are often combined with hyperlinks, forms, or JavaScript to make them interactive.
+
+#### Styling Buttons (Inline CSS)
+
+The appearance of a button can be customized using the `style` attribute.
+
+Example:
+
+```html
+<button style="font-size: 20px">
+    Click Me
+</button>
+```
+
+Some common CSS properties:
+
+**1. Font Size**
+
+```html
+font-size: 20px;
+```
+
+Controls the size of the button text.
+
+**2. Background Color**
+
+```html
+background-color: lightblue;
+```
+
+Changes the button's background color.
+
+**3. Text Color**
+
+```html
+color: white;
+```
+
+Changes the color of the text.
+
+**4. Rounded Corners**
+
+```html
+border-radius: 10px;
+```
+
+Makes the button corners rounded.
+
+Multiple CSS properties can be combined:
+
+```html
+<button
+    style="
+        font-size:20px;
+        background-color:gold;
+        color:black;
+        border-radius:10px;
+    ">
+    Click Me
+</button>
+```
+
+#### Using Buttons as Hyperlinks
+
+Buttons can be wrapped inside anchor tags to navigate to another webpage.
+
+```html
+<a href="crew.html">
+    <button>The Crew Deck</button>
+</a>
+```
+
+Clicking the button will open the linked page.
+
+### A Small Peek Into JavaScript
+
+JavaScript can be used to make buttons perform actions when clicked.
+
+JavaScript code is usually written inside `<script></script>` tags.
+
+Example:
+
+```html
+<script>
+
+function greet()
+{
+    document.getElementById("message").innerHTML = "Hello Pirate!";
+}
+
+</script>
+```
+
+Buttons support the `onclick` attribute.
+
+When the button is clicked, the specified JavaScript function is executed.
+
+```html
+<button onclick="greet()">
+    Click Me
+</button>
+```
+
+#### The `id` Attribute
+
+The `id` attribute can be used to uniquely identify an HTML element.
+
+Example:
+
+```html
+<p id="message">
+    Hello
+</p>
+```
+
+Using JavaScript, we can modify the content of that element:
+
+```html
+document.getElementById("message").innerHTML = "New Text";
+```
+
+This replaces the existing text with the new text.
+
+#### Notes
+
+- Buttons are created using the `<button>` tag.
+- Inline CSS can be used to customize button appearance.
+- Buttons can be combined with anchor tags for navigation.
+- The `onclick` attribute allows JavaScript code to run when a button is clicked.
+- The `id` attribute uniquely identifies an element on the page.
+- `innerHTML` can be used to modify the content of an HTML element using JavaScript.
+- We can also use images inside buttons.
+
+### Project Time 🚀
+
+It's finally time to build the **Quiz Arena** page.
+
+I'll create a small One Piece quiz and use buttons for the answer choices. When a button is clicked, JavaScript will determine whether the answer is correct and display the appropriate message.
+
+This will be my first time adding actual interactivity to **The Thousand Sunny** website.
+
+Also for project part, I had to look a bit more into JS to simplify things, here is the extended notes:
+
+#### Parameters in JavaScript Functions
+
+Functions can accept values called **parameters**.
+
+```javascript
+function greet(name)
+{
+    console.log("Hello " + name);
+}
+```
+
+Here, `name` is a parameter.
+
+When calling the function, we provide an argument:
+
+```javascript
+greet("Luffy");
+```
+
+The parameter receives the value `"Luffy"`.
+
+Parameters make functions more flexible because the same function can work with different values.
+
+Example from the Quiz Arena project:
+
+```javascript
+function correct(id)
+{
+    document.getElementById(id).textContent = "✅ Correct!";
+}
+```
+
+Here, `id` is a parameter. Different question IDs can be passed to the same function, allowing one function to handle multiple questions.
+
+```html
+<button onclick="correct('ans1')">
+```
+
+---
