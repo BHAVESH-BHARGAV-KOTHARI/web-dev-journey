@@ -937,6 +937,8 @@ Just added a bit of unordered lists in the 'crew' page.
 
 ---
 
+## DAY 5
+
 ### Tables
 
 Tables are used to organize data into rows and columns.
@@ -1102,7 +1104,6 @@ Finally some major improment to the website...
 One possible improvement for **The Crew Deck** page is to place each crew member's wanted poster in one column and their description in another. This would allow the text to appear beside the image instead of below it.
 
 ---
-## DAY 5
 
 ### Buttons
 
@@ -1257,7 +1258,7 @@ I'll create a small One Piece quiz and use buttons for the answer choices. When 
 
 This will be my first time adding actual interactivity to **The Thousand Sunny** website.
 
-Also for project part, I had to look a bit more into JS to simplify things, here is the extended notes:
+Also for project part, I had to look a bit more into JS to simplify things, here are the extended notes:
 
 #### Parameters in JavaScript Functions
 
@@ -1297,4 +1298,340 @@ Here, `id` is a parameter. Different question IDs can be passed to the same func
 <button onclick="correct('ans1')">
 ```
 
+## DAY 6
+
+### HTML Forms
+
+Forms are used to collect input from users.
+
+```html
+<form>
+    ...
+</form>
+```
+
+#### Form Attributes
+
+#### action
+
+Specifies where the form data should be sent after submission.
+
+```html
+<form action="process.php">
+```
+
+- Usually points to a backend file or URL that processes the submitted data.
+- Examples:
+  - `process.php`
+  - `login.php`
+  - `/submit-form`
+- If omitted, the form submits to the current page.
+
+#### method
+
+Specifies how the data is sent.
+
+```html
+<form method="get">
+```
+
+or
+
+```html
+<form method="post">
+```
+
+##### GET
+
+- Data is visible in the URL.
+- Suitable for searches and non-sensitive data.
+
+Example:
+
+```text
+/search?name=Bhavesh
+```
+
+##### POST
+
+- Data is sent in the request body.
+- Used for passwords, personal information, etc.
+
+#### enctype *(Backend Topic - Skip for Now)*
+
+```html
+<form enctype="multipart/form-data">
+```
+
+Used when uploading files such as images or documents.
+
+### Labels and Inputs
+
+A label describes what information the user should enter.
+
+```html
+<label for="username">Username:</label>
+<input type="text" id="username">
+```
+
+#### Why use `for` and `id`?
+
+```html
+<label for="username">Username:</label>
+<input id="username">
+```
+
+- Connects the label to the input field.
+- Clicking the label places the cursor inside the input box.
+- Improves accessibility and screen-reader support.
+
+#### Text Input
+
+```html
+<input type="text">
+```
+
+Useful attributes:
+
+```html
+<input
+    type="text"
+    required
+    minlength="3"
+    maxlength="20"
+    placeholder="Enter your username">
+```
+
+##### Attributes
+
+| Attribute | Purpose |
+|-----------|---------|
+| required | Cannot leave field blank |
+| minlength | Minimum number of characters |
+| maxlength | Maximum number of characters |
+| placeholder | Hint shown before typing |
+
+### Submit Button
+
+```html
+<input type="submit">
+```
+
+Submits the form.
+
+### Reset Button
+
+```html
+<input type="reset">
+```
+
+Resets all fields to their default values.
+
+### Password Input
+
+```html
+<input type="password">
+```
+
+Characters appear as dots/asterisks instead of visible text.
+
+### Email Input
+
+```html
+<input type="email">
+```
+
+Requires a valid email format.
+
+Example:
+
+```text
+user@example.com
+```
+
+### Telephone Input
+
+```html
+<input type="tel">
+```
+
+Used for phone numbers.
+
+**Note:** `tel` does not automatically enforce digits-only input.
+
+To enforce a format, use `pattern`.
+
+```html
+<input
+    type="tel"
+    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+```
+
+Accepts:
+
+```text
+123-456-7890
+```
+
+#### Pattern Breakdown
+
+```text
+[0-9]
+```
+
+Any digit from 0 to 9.
+
+```text
+[0-9]{3}
+```
+
+Exactly 3 digits.
+
+```text
+[0-9]{4}
+```
+
+Exactly 4 digits.
+
+### Date Input
+
+```html
+<input type="date">
+```
+
+Provides an interactive calendar.
+
+### Number Input
+
+```html
+<input
+    type="number"
+    min="1"
+    max="10"
+    value="5">
+```
+
+#### Attributes
+
+| Attribute | Purpose |
+|-----------|---------|
+| min | Minimum allowed value |
+| max | Maximum allowed value |
+| value | Default value |
+
+Most browsers provide up/down arrows.
+
+### Radio Buttons
+
+Used when only one option should be selected.
+
+```html
+<input type="radio" name="title"> Mr
+<input type="radio" name="title"> Ms
+<input type="radio" name="title"> Dr
+```
+
+#### Important
+
+If radio buttons share the same `name`, only one can be selected.
+
+```html
+<input type="radio" name="title">
+<input type="radio" name="title">
+<input type="radio" name="title">
+```
+
+Without a shared `name`, multiple buttons can be selected independently.
+
+### Dropdown Menu
+
+```html
+<select>
+    <option>India</option>
+    <option>Japan</option>
+    <option>USA</option>
+</select>
+```
+
+Creates a dropdown list.
+
+### Checkboxes
+
+```html
+<input type="checkbox">
+```
+
+Used when multiple options may be selected.
+
+Examples:
+
+- Reading
+- Gaming
+- Music
+
+### Text Area
+
+Used for large amounts of text.
+
+```html
+<textarea rows="5" cols="30"></textarea>
+```
+
+#### Attributes
+
+| Attribute | Purpose |
+|-----------|---------|
+| rows | Height |
+| cols | Width |
+
+Useful for:
+
+- Comments
+- Feedback
+- Messages
+
+### File Upload
+
+```html
+<input type="file">
+```
+
+Allows users to select files.
+
+Restrict file types using `accept`.
+
+```html
+<input type="file" accept=".jpg,.png">
+```
+
+Examples:
+
+```html
+accept=".pdf"
+accept=".jpg,.png"
+accept="image/*"
+```
+
+### Project Time 🚀
+
+It's time to complete the final page of **The Thousand Sunny** website.
+
+For the Fan Mail Office, I will create a form where visitors can share information about themselves and their One Piece preferences.
+
+The form will collect:
+
+- Basic user information
+- Favorite Straw Hat Pirate
+- Favorite Arc
+- Favorite Characters
+- One Piece rating
+- Review
+and many more!!!
+
+This project will help me practice a variety of HTML form elements while creating a page that feels like a natural part of the website.
+
 ---
+
+
+
+

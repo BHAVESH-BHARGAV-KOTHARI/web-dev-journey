@@ -8,6 +8,119 @@
 </head>
 <body>
   <h1>FAN MAIL</h1>
+
+  <form method = "get">
+
+    <label>Title : </label>
+    <input type="radio" name="title"> Mr
+    <input type="radio" name="title"> Ms
+    <input type="radio" name="title"> Other
+
+    <br><br>
+    <label for = "username">Pirate Name : </label>
+    <input type="text" id="username">
+
+
+
+    <br><br>
+    <label for = "mail">Email : </label>
+    <input type="email" id="mail">
+
+    <br><br>
+    <label for = "pass">Password : </label>
+    <input type = "password" id = "pass">
+
+    <br><br>
+    <label for = "phone">Den Den Mushi : </label>
+    <input type="tel" id = "phone" placeholder = "1234567890" pattern ="[0-9]{10}">
+
+    <br><br>
+    <label for = "bday">Birthday : </label>
+    <input type="date">
+
+    <br><br>
+    <label>Favorite Straw Hat Pirate : </label>
+    <select>
+      <option value="">-- Select --</option>
+      <option>Luffy</option>
+      <option>Zoro</option>
+      <option>Nami</option>
+      <option>Usopp</option>
+      <option>Sanji</option>
+      <option>Chopper</option>
+      <option>Robin</option>
+      <option>Franky</option>
+      <option>Brook</option>
+      <option>Jinbe</option>
+    </select>
+
+    <br><br>
+    <label for="arc">Favorite One Piece Arc:</label>
+    <select id="arc" name="arc">
+        <option value="">-- Select an Arc --</option>
+
+        <option>Romance Dawn</option>
+        <option>Orange Town</option>
+        <option>Syrup Village</option>
+        <option>Baratie</option>
+        <option>Arlong Park</option>
+
+        <option>Loguetown</option>
+        <option>Reverse Mountain</option>
+        <option>Whisky Peak</option>
+        <option>Little Garden</option>
+        <option>Drum Island</option>
+        <option>Alabasta</option>
+
+        <option>Jaya</option>
+        <option>Skypiea</option>
+
+        <option>Water 7</option>
+        <option>Enies Lobby</option>
+        <option>Thriller Bark</option>
+
+        <option>Sabaody Archipelago</option>
+        <option>Amazon Lily</option>
+        <option>Impel Down</option>
+        <option>Marineford</option>
+
+        <option>Fish-Man Island</option>
+        <option>Punk Hazard</option>
+        <option>Dressrosa</option>
+
+        <option>Zou</option>
+        <option>Whole Cake Island</option>
+        <option>Wano Country</option>
+
+        <option>Egghead</option>
+        <option>Elbaf</option>
+    </select>
+
+    <br><br>
+    <label for="rating"> One Piece Rating (1-10)</label>
+    <input type="number" id="rating" min="1" max="10" value="5">
+
+    <br><br>
+    <label>Upload Wanter Poster</label>
+    <input type="file" accept=".jpeg,.png,.jpg">
+
+    <br><br>
+    <label>Your Review on One Piece</label>
+    <br>
+    <textarea rows="5" cols="50"></textarea>
+
+    <br><br>
+    <input type = "submit">
+    <input type = "reset">
+    
+  </form>
+
+  <hr>
+  <p>
+    <a href="index.html">
+      Return to <b>The Thousand Sunny</b>
+    </a>
+  </p>
   
 </body>
 </html>
