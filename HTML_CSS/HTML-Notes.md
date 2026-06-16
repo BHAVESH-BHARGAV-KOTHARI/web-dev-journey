@@ -1632,6 +1632,153 @@ This project will help me practice a variety of HTML form elements while creatin
 
 ---
 
+## DAY 7
 
+### Headers & Footers
 
+HTML provides semantic tags that describe the purpose of different sections of a webpage.
 
+Unlike generic containers such as `<div>`, semantic tags give meaning to the content they contain, making the code easier to read, organize, and maintain.
+
+They also help browsers, search engines, and other tools better understand the structure of a webpage.
+
+#### Header
+
+The `<header>` tag represents introductory content at the top of a webpage or section.
+
+Common uses include:
+
+- Website logo
+- Website title
+- Navigation menus
+- Introductory content
+
+Example:
+
+```html
+<header>
+    <h1>The Thousand Sunny</h1>
+</header>
+```
+
+#### Main
+
+The `<main>` tag represents the primary content of the webpage.
+
+The main content should be unique to that page and typically contains the information users came to see.
+
+Example:
+
+```html
+<main>
+    <h2>Welcome aboard!</h2>
+</main>
+```
+
+#### Footer
+
+The `<footer>` tag represents concluding information at the bottom of a webpage or section.
+
+Common uses include:
+
+- Copyright information
+- Author details
+- Contact information
+- Related links
+- Closing remarks
+
+Example:
+
+```html
+<footer>
+    <p>Made by Bhavesh</p>
+</footer>
+```
+
+#### Styling
+
+Like any other HTML element, headers and footers can be styled using CSS.
+
+Example:
+
+```html
+<header style="background-color: lightblue">
+    ...
+</header>
+
+<footer style="background-color: lightgray">
+    ...
+</footer>
+```
+
+#### Nav
+
+The `<nav>` tag is a semantic HTML element used to contain navigation links.
+
+It commonly contains links to other pages within a website.
+
+Example:
+
+```html
+<nav>
+    <a href="index.html">Home</a>
+    <a href="crew.html">Crew Deck</a>
+</nav>
+```
+
+The `<nav>` tag helps organize navigation sections and makes the purpose of the content clearer to browsers and developers.
+
+#### Notes
+
+- `<header>`, `<main>`, and `<footer>` are semantic tags.
+- Semantic tags describe the purpose of content rather than its appearance.
+- They help organize webpages into meaningful sections.
+- They make code easier to read and maintain.
+- CSS can be applied to these tags just like any other HTML element.
+
+### Project Time 🚀
+
+To conclude the HTML section, I will update **The Thousand Sunny** website to use semantic HTML.
+
+The homepage and other pages will be reorganized using:
+
+- `<header>` for titles and introductory content
+- `<main>` for the primary page content
+- `<footer>` for navigation links, credits, and closing information
+
+This will improve the structure and readability of the code while preparing the project for future CSS styling.
+
+With this update, the HTML portion of **The Thousand Sunny** project is complete.
+
+---
+
+# HTML Complete ✅
+
+The first voyage aboard **The Thousand Sunny** has come to an end.
+
+Along the way, I learned:
+
+- HTML Boilerplate
+- Headings & Paragraphs
+- Hyperlinks
+- Images
+- Audio & Video
+- Favicons
+- Text Formatting
+- Span & Div
+- Lists
+- Tables
+- Buttons
+- Forms
+- Headers & Footers
+- Basic JavaScript Interactions
+
+I also built a small One Piece-themed website consisting of:
+
+- The Thousand Sunny (Home)
+- The Crew Deck
+- Music Room
+- Quiz Arena
+- Fan Mail Office
+
+⚓ **Let's Set Sail and Learn CSS!**
