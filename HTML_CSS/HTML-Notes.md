@@ -1,10 +1,131 @@
-# NOTES
+# HTML NOTES
 
-This file will contain a quick revision notes for HTML & CSS (Daywise).
-index.html and style.css are just sandbox files, where I will be testing out the things I have learnt that Day.
+This file contains my HTML revision notes and project journey.
 
-For the HTML part, I have decided to build a website, adding the features I learn, one at a time.
-After every feature I add, I'll update the notes and them commit.
+While learning HTML, I built a small One Piece-themed website called **The Thousand Sunny**, adding new features as I learned them. After completing each topic, I updated both the website and these notes before committing the changes to Git.
+
+The notes are organized into two sections:
+
+1. **Quick Reference** – A concise table containing commonly used HTML tags and attributes for fast revision.
+2. **Detailed Notes** – Explanations, examples, observations, and project updates for each topic.
+
+The goal of these notes is not only to document HTML concepts, but also to track my progress from writing a basic webpage to building a complete multi-page website.
+
+---
+
+## Quick Reference
+
+# QUICK REVISION NOTES
+
+## HTML Tag Reference
+
+| Tag | Syntax | Description |
+|------|----------|-------------|
+| HTML Document | `<!DOCTYPE html>` | Declares the document as HTML5. |
+| Root Element | `<html></html>` | Root element of the webpage. |
+| Head | `<head></head>` | Contains metadata about the webpage. |
+| Body | `<body></body>` | Contains all visible webpage content. |
+| Title | `<title></title>` | Text displayed on the browser tab. |
+| Header | `<header></header>` | Semantic container for introductory content. |
+| Navigation | `<nav></nav>` | Semantic container for navigation links. |
+| Main | `<main></main>` | Contains the primary content of the page. |
+| Footer | `<footer></footer>` | Semantic container for concluding information. |
+| Heading 1 | `<h1></h1>` | Highest level heading. |
+| Heading 2 | `<h2></h2>` | Second level heading. |
+| Heading 3 | `<h3></h3>` | Third level heading. |
+| Heading 4 | `<h4></h4>` | Fourth level heading. |
+| Heading 5 | `<h5></h5>` | Fifth level heading. |
+| Heading 6 | `<h6></h6>` | Lowest level heading. |
+| Paragraph | `<p></p>` | Defines a paragraph. |
+| Line Break | `<br>` | Inserts a line break. |
+| Horizontal Rule | `<hr>` | Creates a horizontal separator line. |
+| Preformatted Text | `<pre></pre>` | Preserves spaces and line breaks exactly as written. |
+| Hyperlink | `<a href=""></a>` | Creates a clickable hyperlink. |
+| Image | `<img src="" alt="">` | Displays an image. |
+| Audio | `<audio></audio>` | Embeds audio content. |
+| Audio Source | `<source src="">` | Specifies an audio/video file source. |
+| Video | `<video></video>` | Embeds video content. |
+| Favicon | `<link rel="icon">` | Specifies the webpage favicon. |
+| Bold Text | `<b></b>` | Displays bold text. |
+| Italic Text | `<i></i>` | Displays italic text. |
+| Underlined Text | `<u></u>` | Displays underlined text. |
+| Deleted Text | `<del></del>` | Displays crossed-out text. |
+| Small Text | `<small></small>` | Displays smaller text. |
+| Big Text* | `<big></big>` | Displays larger text (*obsolete*). |
+| Subscript | `<sub></sub>` | Displays subscript text. |
+| Superscript | `<sup></sup>` | Displays superscript text. |
+| Monospaced Text* | `<tt></tt>` | Displays monospaced text (*obsolete*). |
+| Highlighted Text | `<mark></mark>` | Highlights text. |
+| Span | `<span></span>` | Inline container for grouping/styling content. |
+| Div | `<div></div>` | Block container for grouping larger sections. |
+| Unordered List | `<ul></ul>` | Creates a bulleted list. |
+| Ordered List | `<ol></ol>` | Creates a numbered list. |
+| List Item | `<li></li>` | Represents an item within a list. |
+| Description List | `<dl></dl>` | Creates a description list. |
+| Description Term | `<dt></dt>` | Represents a term in a description list. |
+| Description Details | `<dd></dd>` | Represents a description for a term. |
+| Table | `<table></table>` | Creates a table. |
+| Table Row | `<tr></tr>` | Represents a row in a table. |
+| Table Header | `<th></th>` | Represents a header cell in a table. |
+| Table Data | `<td></td>` | Represents a data cell in a table. |
+| Button | `<button></button>` | Creates a clickable button. |
+| Form | `<form></form>` | Creates a form for user input. |
+| Label | `<label></label>` | Defines a label for a form element. |
+| Input | `<input>` | Creates an input field. |
+| Text Area | `<textarea></textarea>` | Multi-line text input field. |
+| Select | `<select></select>` | Creates a dropdown menu. |
+| Option | `<option></option>` | Represents an option within a dropdown. |
+| Fieldset | `<fieldset></fieldset>` | Groups related form elements. |
+| Legend | `<legend></legend>` | Caption for a fieldset. |
+| Script | `<script></script>` | Embeds JavaScript code. |
+
+### Attribute Syntax
+
+Attributes provide additional information or functionality to HTML elements.
+
+General Syntax:
+
+```html
+<tag attribute="value">
+```
+
+Example:
+
+```html
+<a href="crew.html" target="_blank">
+    Visit Crew Page
+</a>
+```
+
+## Common HTML Attributes
+
+| Attribute | Example | Description |
+|------------|----------|-------------|
+| `href` | `<a href="crew.html">` | Specifies the destination of a hyperlink. |
+| `src` | `<img src="luffy.png">` | Specifies the source file for images, audio, and video. |
+| `alt` | `<img alt="Luffy">` | Alternative text shown if an image fails to load. |
+| `width` | `<img width="150">` | Sets the width of an element. |
+| `height` | `<img height="220">` | Sets the height of an element. |
+| `title` | `<a title="Visit Crew Page">` | Tooltip displayed when hovering over an element. |
+| `target` | `<a target="_blank">` | Controls where a link opens. |
+| `type` | `<source type="audio/mpeg">` | Specifies the type of data or input. |
+| `controls` | `<audio controls>` | Displays media controls. |
+| `autoplay` | `<audio autoplay>` | Automatically starts media playback. |
+| `muted` | `<video muted>` | Starts media in a muted state. |
+| `loop` | `<audio loop>` | Repeats media continuously. |
+| `style` | `<p style="color:red">` | Applies inline CSS styling. |
+| `id` | `<p id="message">` | Assigns a unique identifier to an element. |
+| `onclick` | `<button onclick="func()">` | Executes JavaScript when clicked. |
+| `border` | `<table border="1">` | Adds a border to a table. |
+| `align` | `<td align="center">` | Aligns content inside a table cell. |
+| `name` | `<input name="email">` | Assigns a name to form data. |
+| `value` | `<input value="Luffy">` | Sets a default value. |
+| `placeholder` | `<input placeholder="Enter Name">` | Displays hint text inside an input field. |
+| `required` | `<input required>` | Makes a form field mandatory. |
+
+---
+
+## Detailed Notes
 
 ## DAY 1
 
@@ -1782,3 +1903,5 @@ I also built a small One Piece-themed website consisting of:
 - Fan Mail Office
 
 ⚓ **Let's Set Sail and Learn CSS!**
+
+---
