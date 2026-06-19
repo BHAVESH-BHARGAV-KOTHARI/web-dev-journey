@@ -15,8 +15,6 @@ The goal of these notes is not only to document HTML concepts, but also to track
 
 ## Quick Reference
 
-# QUICK REVISION NOTES
-
 ## HTML Tag Reference
 
 | Tag | Syntax | Description |

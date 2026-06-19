@@ -1,1 +1,53 @@
-h1 {color : rgb(12, 84, 112)}
+@font-face {
+    font-family: OnePiece;
+    src: url("Assets/PirataOne-Regular.ttf");
+}
+
+@font-face {
+    font-family: Cinzel;
+    src: url("Assets/Cinzel-VariableFont_wght.ttf");
+}
+
+@font-face {
+    font-family: Cormorant;
+    src: url("Assets/CormorantGaramond-Italic-VariableFont_wght.ttf");
+}
+
+main {
+    background-color: #F0FAFA;
+    color: #1E4040;
+    font-family: Cinzel, serif;
+}
+
+h1 {
+    color: #0A7A7A;
+    font-family: OnePiece, serif;
+}
+
+.tagline {
+    color: #3A6666;
+    font-family: Cormorant, serif;
+    font-style: italic;
+}
+
+header {
+    text-transform: uppercase;
+    background-color: #C8EEEE;
+}
+
+footer {
+    background-color: #C8EEEE;
+}
+
+nav a {
+    color: #0A7A7A;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #E8A800;
+}
+
+nav a:visited {
+    color: #4A8888;
+}

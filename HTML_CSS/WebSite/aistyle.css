@@ -1,0 +1,63 @@
+@font-face {
+    font-family: OnePiece;
+    src: url("Assets/PirataOne-Regular.ttf");
+}
+
+@font-face {
+    font-family: Cinzel;
+    src: url("Assets/Cinzel-VariableFont_wght.ttf");
+}
+
+@font-face {
+    font-family: Cormorant;
+    src: url("Assets/CormorantGaramond-Italic-VariableFont_wght.ttf");
+}
+
+main {
+    background-color: #0A1E3F;
+    color: #EDE6D6;
+    font-family: Cinzel, serif;
+    line-height: 1.7;
+    letter-spacing: 0.02em;
+}
+
+h1 {
+    color: #E0A82E;
+    font-family: OnePiece, serif;
+    letter-spacing: 0.04em;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.tagline {
+    color: #C8DCE8;
+    font-family: Cormorant, serif;
+    font-style: italic;
+    font-size: 1.4rem;
+    letter-spacing: 0.01em;
+}
+
+header,
+footer {
+    background-color: #13294B;
+    border-bottom: 2px solid #E0A82E; /* footer: use border-top */
+}
+
+footer {
+    border-bottom: none;
+    border-top: 2px solid #E0A82E;
+}
+
+nav a {
+    color: #5BA8C9;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    letter-spacing: 0.05em;
+}
+
+nav a:hover {
+    color: #E0A82E;
+}
+
+nav a:visited {
+    color: #7FA9C4;
+}

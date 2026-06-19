@@ -29,6 +29,9 @@ This way, the website evolves alongside my CSS knowledge and serves as a visual 
 | border | `border: 2px solid black;` | Adds a border around an element. |
 | display | `display: flex;` | Controls how an element is displayed. |
 | position | `position: relative;` | Controls element positioning. |
+| background-color | `background-color: black;` | Changes the background color of an element. |
+| font-weight | `font-weight: bold;` | Controls text thickness/boldness. |
+| font-style | `font-style: italic;` | Applies italic or oblique styling. |
 
 ---
 
@@ -165,3 +168,215 @@ Sometimes multiple elements need the same styling. In such cases we can use a **
 This concludes the introduction to CSS. Time to start styling **The Thousand Sunny** website.
 
 The first task is to create an external stylesheet and connect it to the webpage.
+
+---
+
+## DAY 2
+
+### Colors in CSS
+
+CSS provides multiple ways to specify colors.
+
+#### Color Formats
+
+1. **Color Names**
+
+   * Uses predefined color names.
+
+   ```css
+   color: red;
+   background-color: black;
+   ```
+
+2. **RGB Values**
+
+   * RGB stands for Red, Green and Blue.
+   * Each value ranges from 0 to 255.
+
+   ```css
+   color: rgb(255, 0, 0);
+   ```
+
+3. **Hexadecimal Values**
+
+   * Begins with `#`.
+   * Uses hexadecimal values to represent RGB colors.
+
+   ```css
+   color: #ff0000;
+   ```
+
+4. **HSL Values**
+
+   * HSL stands for Hue, Saturation and Lightness.
+
+   ```css
+   color: hsl(0, 100%, 50%);
+   ```
+
+#### Common Color Properties
+
+1. **`background-color`**
+
+   * Changes the background color of an element.
+
+   ```css
+   background-color: black;
+   ```
+
+2. **`color`**
+
+   * Changes the text color.
+
+   ```css
+   color: white;
+   ```
+
+### Fonts in CSS
+
+Fonts control how text appears on a webpage.
+
+#### Font Family
+
+The `font-family` property is used to specify which font should be used.
+
+```css
+font-family: Arial;
+```
+
+**Important Notes**
+
+* Not all fonts are available on every device or browser.
+* It is good practice to provide fallback fonts.
+* Multiple fonts are separated using commas.
+
+```css
+font-family: Arial, Helvetica, sans-serif;
+```
+
+If a font name contains spaces, enclose it in quotation marks.
+
+```css
+font-family: "Lucida Console", monospace;
+```
+
+#### Font Size
+
+The `font-size` property controls the size of text.
+
+```css
+font-size: 20px;
+```
+
+**Notes**
+
+* Default browser font size is usually `16px`.
+* `1em` is equivalent to `100%` of the parent element's font size.
+
+```css
+font-size: 1em;
+font-size: 150%;
+```
+
+#### Font Weight
+
+Controls how bold the text appears.
+
+```css
+font-weight: bold;
+```
+
+```css
+font-weight: 100;
+font-weight: 400;
+font-weight: 700;
+```
+
+#### Font Style
+
+Used to apply italic styling.
+
+```css
+font-style: italic;
+```
+
+Other values:
+
+```css
+font-style: normal;
+font-style: oblique;
+```
+
+### Google Fonts
+
+Google Fonts provides a large collection of free web fonts.
+
+Website:
+
+```text
+https://fonts.google.com
+```
+
+#### Using Google Fonts
+
+1. Select a font.
+2. Copy the provided `<link>` tag.
+3. Paste it inside the `<head>` section of the HTML document.
+4. Use the font in CSS.
+
+Example:
+
+```html
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/...">
+</head>
+```
+
+```css
+font-family: "Roboto", sans-serif;
+```
+
+### Local Fonts
+
+Instead of loading fonts from the internet, we can store font files inside our project.
+
+Example structure:
+
+```text
+project/
+│
+├── fonts/
+│   └── OnePiece.ttf
+│
+├── css/
+│   └── style.css
+```
+
+#### Using Local Fonts
+
+```css
+@font-face {
+    src: url("../fonts/OnePiece.ttf");
+    font-family: OnePiece;
+}
+```
+
+Now the custom font can be used like any other font.
+
+```css
+h1 {
+    font-family: OnePiece;
+}
+```
+
+#### Notes
+
+* Local fonts work without an internet connection.
+* Different font files require different `@font-face` declarations.
+* Common font formats include `.ttf`, `.otf`, `.woff`, and `.woff2`.
+
+### Project Time 🚀
+
+Time to give **The Thousand Sunny** some personality.
+
+For this update, I connected a stylesheet to all webpages, experimented with colors, and started styling text using different fonts.
