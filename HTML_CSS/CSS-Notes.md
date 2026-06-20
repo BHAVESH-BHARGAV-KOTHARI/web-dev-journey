@@ -33,6 +33,28 @@ This way, the website evolves alongside my CSS knowledge and serves as a visual 
 | font-weight | `font-weight: bold;` | Controls text thickness/boldness. |
 | font-style | `font-style: italic;` | Applies italic or oblique styling. |
 
+| Property | Syntax | Description |
+|----------|----------|-------------|
+| border-style | `border-style: solid;` | Sets the border style. |
+| border-width | `border-width: 3px;` | Sets border thickness. |
+| border-color | `border-color: gold;` | Sets border color. |
+| border-radius | `border-radius: 20px;` | Rounds element corners. |
+| border | `border: 3px solid gold;` | Shorthand for width, style, and color. |
+| border-top | `border-top: 3px solid gold;` | Styles only the top border. |
+| border-bottom | `border-bottom: 3px solid gold;` | Styles only the bottom border. |
+| border-left | `border-left: 3px solid gold;` | Styles only the left border. |
+| border-right | `border-right: 3px solid gold;` | Styles only the right border. |
+| text-shadow | `text-shadow: 3px 3px 5px black;` | Adds a shadow to text. |
+| box-shadow | `box-shadow: 5px 5px 10px black;` | Adds a shadow around an element. |
+| margin | `margin: 20px;` | Sets space outside an element. |
+| margin-top | `margin-top: 20px;` | Sets top margin. |
+| margin-bottom | `margin-bottom: 20px;` | Sets bottom margin. |
+| margin-left | `margin-left: 20px;` | Sets left margin. |
+| margin-right | `margin-right: 20px;` | Sets right margin. |
+| margin: auto | `margin: auto;` | Automatically calculates margins, commonly used for centering. |
+
+
+
 ---
 
 ## DAY 1
@@ -154,6 +176,31 @@ Sometimes multiple elements need the same styling. In such cases we can use a **
 
 * Multiple elements can share the same class.
 * Classes are referenced using `.`.
+
+### Descendant Selectors
+
+Descendant selectors are used to target elements that are inside another element.
+
+```css
+nav a {
+    color: blue;
+}
+```
+
+This selects every `<a>` element inside a `<nav>` element.
+
+Other examples:
+
+```css
+.crew-card img { } /* any <img> inside .crew-card */
+p[id^="ans"] { }   /* any <p> whose id starts with "ans" */
+```
+
+The space between two selectors means:
+
+> Find the first element, then look inside it for the second element.
+
+Descendant selectors allow more precise styling without creating extra classes or IDs. We have already used descendant selectors while styling navigation links using `nav a`.
 
 #### Why External CSS is Preferred
 
@@ -380,3 +427,323 @@ h1 {
 Time to give **The Thousand Sunny** some personality.
 
 For this update, I connected a stylesheet to all webpages, experimented with colors, and started styling text using different fonts.
+
+---
+
+## DAY 3
+
+### Borders
+
+Borders are used to create an outline around an element.
+
+#### Border Style
+
+The `border-style` property determines the appearance of the border.
+
+```css
+border-style: solid;
+```
+
+Common border styles:
+
+```css
+solid
+dashed
+dotted
+double
+ridge
+groove
+inset
+outset
+none
+```
+
+* `none` removes the border.
+* Some elements may have browser-default borders which can be removed using `border: none;`.
+
+#### Border Width
+
+Controls the thickness of the border.
+
+```css
+border-width: 3px;
+```
+
+#### Border Color
+
+Controls the border color.
+
+```css
+border-color: gold;
+```
+
+#### Border Radius
+
+Rounds the corners of an element.
+
+```css
+border-radius: 20px;
+```
+
+Larger values create more rounded corners.
+
+#### Shorthand Syntax
+
+Instead of writing three separate properties:
+
+```css
+border-width: 3px;
+border-style: solid;
+border-color: gold;
+```
+
+we can write:
+
+```css
+border: 3px solid gold;
+```
+
+> `border-radius` is a separate property and must still be written separately.
+
+#### Individual Borders
+
+We can style specific sides independently.
+
+```css
+border-top: 3px solid gold;
+border-bottom: 3px solid gold;
+border-left: 3px solid gold;
+border-right: 3px solid gold;
+```
+
+### Project Time 🚀
+
+Time to decorate **The Thousand Sunny**.
+
+For this update, I experimented with different border styles and added borders around sections of the webpage.
+
+---
+
+### Shadows
+
+Shadows can be added to both text and elements.
+
+#### Text Shadows
+
+The `text-shadow` property adds a shadow behind text.
+
+Syntax:
+
+```css
+text-shadow: horizontal-offset vertical-offset blur-radius color;
+```
+
+Example:
+
+```css
+text-shadow: 3px 3px 5px black;
+```
+
+Parameters:
+
+1. Horizontal offset
+
+   * Positive → Right
+   * Negative → Left
+
+2. Vertical offset
+
+   * Positive → Down
+   * Negative → Up
+
+3. Blur radius
+
+   * Higher value = softer shadow
+
+4. Color
+
+   * Shadow color
+
+#### Multiple Shadows
+
+Multiple shadows can be added using commas.
+
+```css
+text-shadow:
+    2px 2px 5px black,
+    -2px -2px 5px gold;
+```
+
+#### Box Shadows
+
+The `box-shadow` property adds a shadow around an element.
+
+Example:
+
+```css
+#box {
+    width: 200px;
+    height: 200px;
+    background-color: white;
+
+    box-shadow: 5px 5px 10px black;
+}
+```
+
+Syntax:
+
+```css
+box-shadow: horizontal-offset vertical-offset blur-radius color;
+```
+
+#### Notes
+
+* Box shadows work on most elements, not just `<div>`.
+* Often used to create depth and make elements appear elevated.
+* Negative offsets can be used to place shadows above or to the left.
+
+### Project Time 🚀
+
+Time to make the ship stand out.
+
+For this update, I added shadows to headings and experimented with box shadows to create depth.
+
+---
+
+### Margins
+
+Margins create space around an element.
+
+```text
+Margin → Border → Padding → Content
+```
+
+Margins affect the space outside the border.
+
+#### Equal Margin on All Sides
+
+```css
+margin: 20px;
+```
+
+#### Individual Margins
+
+```css
+margin-top: 20px;
+margin-bottom: 20px;
+margin-left: 20px;
+margin-right: 20px;
+```
+
+#### Auto Margins
+
+CSS can automatically calculate margins.
+
+```css
+margin: auto;
+```
+
+A common use case:
+
+```css
+width: 300px;
+margin: auto;
+```
+
+This centers a block element horizontally.
+
+#### Notes
+
+* `margin: auto;` only works when the element has a defined width.
+* Margins can be positive or negative.
+* Negative margins are advanced usage and can cause elements to overlap.
+
+#### Margin Shorthand
+
+```css
+margin: 10px 20px 30px 40px;
+```
+
+Order:
+
+```text
+Top → Right → Bottom → Left
+```
+
+Example:
+
+```css
+margin: 10px 20px;
+```
+
+means:
+
+```text
+Top & Bottom = 10px
+Left & Right = 20px
+```
+
+### Padding
+
+Padding creates space inside an element, between its content and border.
+
+```text
+Margin → Border → Padding → Content
+```
+
+Unlike margins, padding affects the space inside an element.
+
+Common examples:
+
+```css
+padding: 20px;        /* all four sides */
+padding-top: 20px;
+padding-bottom: 20px;
+padding-left: 20px;
+padding-right: 20px;
+```
+
+Padding also supports shorthand syntax.
+
+```css
+padding: 20px;
+```
+
+Applies padding to all four sides.
+
+```css
+padding: 10px 20px;
+```
+
+The first value represents Top & Bottom, while the second value represents Left & Right.
+
+```css
+padding: 10px 20px 15px 5px;
+```
+
+The order follows:
+
+```text
+Top → Right → Bottom → Left
+```
+
+#### Margin vs Padding
+
+- Margin = Space outside an element.
+- Padding = Space inside an element.
+
+```text
+[ Margin | Border | Padding | Content | Padding | Border | Margin ]
+```
+
+Padding increases the distance between content and the border, and background colors extend into the padding area. Unlike margins, padding cannot be set to `auto`.
+
+Padding is commonly used to make buttons, cards, navigation bars, and sections look less cramped.
+
+### Project Time 🚀
+
+Time to give the crew some breathing room.
+
+For this update, I used margins to separate sections and improve the overall layout of **The Thousand Sunny** website.
+
+---

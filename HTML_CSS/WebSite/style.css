@@ -17,31 +17,48 @@ main {
     background-color: #F0FAFA;
     color: #1E4040;
     font-family: Cinzel, serif;
+    margin: 0 auto;          /* centers the main content block */
 }
 
 h1 {
-    color: #0A7A7A;
+    color: #F5C842;
     font-family: OnePiece, serif;
+    margin-top: 6px;
+    margin-bottom: 4px;
+    text-shadow:
+        2px 2px 4px rgba(0, 0, 0, 0.7),
+        0px 0px 12px rgba(232, 168, 0, 0.5);
 }
 
 .tagline {
     color: #3A6666;
     font-family: Cormorant, serif;
     font-style: italic;
+    margin-top: 0;
+    margin-bottom: 8px;
 }
 
 header {
     text-transform: uppercase;
     background-color: #C8EEEE;
+    border-bottom: 3px solid #0A7A7A;  /* only bottom border — cleaner look */
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);  /* shadow below header */
 }
 
 footer {
     background-color: #C8EEEE;
+    border-top: 3px solid #0A7A7A;    /* mirrors the header */
+    margin-top: 20px;
+    padding: 10px 20px;
+    box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.15);  /* shadow above footer */
 }
 
 nav a {
     color: #0A7A7A;
     text-decoration: none;
+    margin-right: 16px;                /* spacing between nav links */
 }
 
 nav a:hover {
@@ -50,4 +67,123 @@ nav a:hover {
 
 nav a:visited {
     color: #4A8888;
+}
+
+table {
+    background: #FFFDF0;
+    border: 1px solid #9ABBBB;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 24px;
+    box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.12);
+    width: 100%;
+}
+
+.crew-card img {
+    display: block;
+    box-shadow:
+        6px 8px 20px rgba(0, 0, 0, 0.5),
+        2px 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.music-page main {
+    background-color: #F0FAFA;
+    color: #1E4040;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+pre {
+    font-family: Cormorant, serif;
+    font-size: 1.1rem;
+    line-height: 1.9;
+    border-left: 3px solid #E8A800;
+    padding-left: 20px;
+    background-color: #FFFDF0;
+    border-radius: 8px;
+    margin: 20px 0;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.music-page img {
+    width: 50px;
+    border-radius: 8px;
+    box-shadow: 6px 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.song-desc {
+    color: #3A6666;
+    font-family: Cormorant, serif;
+    font-size: 1.05rem;
+}
+
+.quiz-page button {
+    background-color: #C8EEEE;
+    color: #1E4040;
+    border: 2px solid #0A7A7A;
+    border-radius: 6px;
+    padding: 6px 16px;
+    font-family: Cinzel, serif;
+    cursor: pointer;
+    margin: 4px 0;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.quiz-page button:hover {
+    background-color: #0A7A7A;
+    color: #F0FAFA;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.25);
+}
+.quiz-page h3 {
+    border-left: 4px solid #E8A800;
+    padding-left: 12px;
+    color: #1E4040;
+    margin-bottom: 8px;
+}
+.quiz-page p[id^="ans"] {
+    font-family: Cinzel, serif;
+    font-weight: bold;
+    color: #0A7A7A;
+    margin-top: 6px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    background-color: #FFFDF0;
+    border: 1px solid #9ABBBB;
+    display: inline-block;
+}
+
+.hero {
+    background-color: #FFFDF0;
+    border: 1px solid #9ABBBB;
+    border-radius: 10px;
+    border-left: 4px solid #E8A800;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.explore ul {
+    list-style: none;
+    padding: 0;
+}
+
+.explore li {
+    background-color: #FFFDF0;
+    border: 1px solid #9ABBBB;
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin-bottom: 12px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+.quote blockquote {
+    font-family: Cormorant, serif;
+    font-size: 1.3rem;
+    color: #0A7A7A;
+    border-left: 4px solid #E8A800;
+    padding: 12px 20px;
+    margin: 20px 0;
+    background-color: #FFFDF0;
+    border-radius: 0 8px 8px 0;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
 }
