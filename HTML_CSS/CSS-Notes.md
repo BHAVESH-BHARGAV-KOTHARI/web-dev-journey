@@ -53,6 +53,54 @@ This way, the website evolves alongside my CSS knowledge and serves as a visual 
 | margin-right | `margin-right: 20px;` | Sets right margin. |
 | margin: auto | `margin: auto;` | Automatically calculates margins, commonly used for centering. |
 
+| float | `float: left;` | Allows content to wrap around an element. |
+| clear | `clear: left;` | Prevents elements from wrapping around floated elements. |
+| display | `display: flow-root;` | Creates a new block formatting context and contains floated elements. |
+| overflow | `overflow: auto;` | Controls how overflowing content is handled. |
+| overflow-x | `overflow-x: scroll;` | Controls horizontal overflow. |
+| overflow-y | `overflow-y: hidden;` | Controls vertical overflow. |
+| overflow-clip-margin | `overflow-clip-margin: 10px;` | Extends the clipping boundary when using `overflow: clip`. |
+
+| display | `display: block;` | Controls how an element is displayed. |
+| visibility | `visibility: hidden;` | Makes an element invisible while preserving its space. |
+| width | `width: 300px;` | Sets an element's width. |
+| height | `height: 150px;` | Sets an element's height. |
+| box-sizing | `box-sizing: border-box;` | Includes padding and border within an element's specified size. |
+| min-width | `min-width: 200px;` | Sets the minimum width of an element. |
+| max-width | `max-width: 600px;` | Sets the maximum width of an element. |
+| min-height | `min-height: 100px;` | Sets the minimum height of an element. |
+| max-height | `max-height: 400px;` | Sets the maximum height of an element. |
+| vh | `height: 100vh;` | Viewport height unit (1vh = 1% of viewport height). |
+| vw | `width: 100vw;` | Viewport width unit (1vw = 1% of viewport width). |
+
+| position | `position: relative;` | Controls how an element is positioned. |
+| top | `top: 20px;` | Moves a positioned element downward from the top. |
+| bottom | `bottom: 20px;` | Moves a positioned element upward from the bottom. |
+| left | `left: 20px;` | Moves a positioned element to the right from the left edge. |
+| right | `right: 20px;` | Moves a positioned element to the left from the right edge. |
+
+| background-image | `background-image: url("bg.jpg");` | Sets an image as the background. |
+| background-repeat | `background-repeat: no-repeat;` | Controls whether a background image repeats. |
+| background-position | `background-position: center;` | Sets the position of a background image. |
+| background-attachment | `background-attachment: fixed;` | Determines whether the background scrolls with the page. |
+| background-size | `background-size: cover;` | Controls the size of a background image. |
+| visibility | `visibility: hidden;` | Hides an element while preserving its space. |
+| > | `div > p { }` | Selects direct child elements. |
+| + | `h2 + p { }` | Selects the immediately following sibling. |
+| ~ | `h2 ~ p { }` | Selects all following sibling elements. |
+
+| :hover | `button:hover { }` | Styles an element when the mouse hovers over it. |
+| :active | `a:active { }` | Styles an element while it is being clicked. |
+| :visited | `a:visited { }` | Styles visited links. |
+| :link | `a:link { }` | Styles unvisited links. |
+| :not() | `li:not(.captain) { }` | Selects all matching elements except those specified. |
+| :nth-child() | `li:nth-child(odd) { }` | Selects specific child elements. |
+| ::first-letter | `h1::first-letter { }` | Styles the first letter of an element. |
+| ::first-line | `p::first-line { }` | Styles the first line of an element. |
+| ::selection | `p::selection { }` | Styles selected text. |
+| ::before | `li::before { content: "⭐"; }` | Inserts content before an element. |
+| ::after | `li::after { content: "🏴‍☠️"; }` | Inserts content after an element. |
+| ::marker | `li::marker { }` | Styles list markers. |
 
 
 ---
@@ -745,5 +793,847 @@ Padding is commonly used to make buttons, cards, navigation bars, and sections l
 Time to give the crew some breathing room.
 
 For this update, I used margins to separate sections and improve the overall layout of **The Thousand Sunny** website.
+
+---
+
+## DAY 4
+
+### Float
+
+By default, block elements such as `<div>` and `<img>` occupy their own space, causing surrounding content to appear above or below them.
+
+The `float` property allows text and inline content to wrap around an element.
+
+#### Float Left
+
+```css
+#luffy {
+    float: left;
+}
+```
+
+The element moves to the left side of its container, and surrounding text flows around its right side and underneath it.
+
+#### Float Right
+
+```css
+#zoro {
+    float: right;
+}
+```
+
+The element moves to the right side of its container, and surrounding text flows around its left side and underneath it.
+
+#### Common Values
+
+```css
+float: left;
+float: right;
+float: none;
+```
+
+#### Example
+
+```css
+img {
+    float: left;
+    margin-right: 15px;
+}
+```
+
+The margin prevents the text from touching the image.
+
+#### Float Overflow
+
+Sometimes a floated element may appear to escape its parent container.
+
+```css
+.container {
+    display: flow-root;
+}
+```
+
+Using `display: flow-root;` creates a new block formatting context and ensures the container properly contains the floated element.
+
+#### Notes
+
+* Float was originally designed for wrapping text around images.
+* Text will usually wrap on the side and below the floated element.
+* Adding margins around floated elements often improves readability.
+* Modern layouts are usually created with Flexbox and Grid, but float is still useful for image/text wrapping.
+
+---
+
+### Overflow
+
+The `overflow` property controls what happens when the content inside an element becomes larger than the element itself.
+
+To observe overflow, the element usually needs a fixed width and/or height.
+
+Example:
+
+```css
+.container {
+    width: 200px;
+    height: 100px;
+    border: 2px solid gold;
+}
+```
+
+If the content exceeds these dimensions, the overflow property determines how it is handled.
+
+#### Overflow Values
+
+1. **`visible`**
+
+   * Default value.
+   * Content is allowed to overflow outside the element.
+
+   ```css
+   overflow: visible;
+   ```
+
+2. **`hidden`**
+
+   * Content that exceeds the element's boundaries is hidden.
+   * The hidden content cannot be accessed by scrolling.
+
+   ```css
+   overflow: hidden;
+   ```
+
+3. **`clip`**
+
+   * Similar to `hidden`.
+   * Content is clipped at the element's boundary.
+   * Does not provide scrolling.
+
+   ```css
+   overflow: clip;
+   ```
+
+4. **`overflow-clip-margin`**
+
+   * Used together with `overflow: clip`.
+   * Allows the clipping boundary to extend slightly beyond the element.
+
+   ```css
+   overflow: clip;
+   overflow-clip-margin: 10px;
+   ```
+
+5. **`scroll`**
+
+   * Always displays scrollbars.
+   * Allows users to scroll and access hidden content.
+
+   ```css
+   overflow: scroll;
+   ```
+
+6. **`auto`**
+
+   * Scrollbars appear only when necessary.
+   * If the content fits inside the element, no scrollbars are shown.
+
+   ```css
+   overflow: auto;
+   ```
+
+#### Overflow in Specific Directions
+
+CSS also allows controlling overflow separately for horizontal and vertical directions.
+
+```css
+overflow-x: scroll;
+overflow-y: hidden;
+```
+
+#### Notes
+
+* Overflow is most commonly used with fixed-size containers.
+* `auto` is generally preferred over `scroll` because scrollbars only appear when needed.
+* `hidden` is useful when extra content should not be visible.
+* `scroll` and `auto` allow users to access overflowing content.
+* `overflow-x` controls horizontal overflow.
+* `overflow-y` controls vertical overflow.
+
+## DAY 5
+
+### Display
+
+The `display` property determines how an element is displayed on a webpage.
+
+#### Block Elements
+
+Block elements start on a new line and occupy the full available width by default.
+
+Common block elements:
+
+```text
+<h1>  <div>  <p>  <form>  <header>  <footer>
+```
+
+Properties like `width` and `height` can be applied to block elements.
+
+#### Inline Elements
+
+Inline elements only occupy the space required by their content and do not start on a new line.
+
+Common inline elements:
+
+```text
+<span>  <a>  <img>
+```
+
+Unlike block elements, `width` and `height` generally have no effect on inline elements.
+
+#### Common Display Values
+
+1. **`display: block`**
+
+   Converts an inline element into a block element.
+
+   ```css
+   span {
+       display: block;
+       width: 200px;
+       height: 50px;
+   }
+   ```
+
+2. **`display: inline`**
+
+   Converts a block element into an inline element.
+
+   ```css
+   div {
+       display: inline;
+   }
+   ```
+
+   The element only occupies the space required by its content, and `width` and `height` no longer take effect.
+
+3. **`display: inline-block`**
+
+   Behaves like an inline element while still allowing `width` and `height` to be applied.
+
+   ```css
+   span {
+       display: inline-block;
+       width: 150px;
+       height: 50px;
+   }
+   ```
+
+4. **`display: none`**
+
+   Completely removes the element from the page layout.
+
+   ```css
+   display: none;
+   ```
+
+#### Visibility
+
+Instead of removing an element completely, we can make it invisible.
+
+```css
+visibility: hidden;
+```
+
+The element becomes invisible, but its space is still reserved on the webpage.
+
+#### Notes
+
+* `display: none` removes both the element and the space it occupies.
+* `visibility: hidden` hides only the element while preserving its layout space.
+* `inline-block` combines the advantages of both inline and block elements.
+* Modern layouts are typically created using Flexbox or Grid, which are built upon the `display` property.
+
+---
+
+### Width and Height
+
+The `width` and `height` properties control the size of an element.
+
+#### Width and Height
+
+```css
+width: 300px;
+height: 150px;
+```
+
+They can also be set using percentages.
+
+```css
+width: 50%;
+height: 75%;
+```
+
+By default:
+
+```css
+width: auto;
+height: auto;
+```
+
+The browser automatically determines the appropriate size.
+
+#### Box Sizing
+
+By default, CSS calculates an element's size using only its content.
+
+```text
+Actual Width = width + padding + border
+```
+
+Example:
+
+```css
+width: 200px;
+padding: 20px;
+border: 5px solid black;
+```
+
+The actual width becomes **250px**.
+
+Using:
+
+```css
+box-sizing: border-box;
+```
+
+changes this behavior so that the specified width already includes the content, padding, and border.
+
+```text
+Actual Width = width
+```
+
+This makes layouts much easier to manage.
+
+It is common practice to apply it to every element.
+
+```css
+* {
+    box-sizing: border-box;
+}
+```
+
+#### Minimum and Maximum Sizes
+
+CSS allows limiting how small or large an element can become.
+
+```css
+max-width: 600px;
+min-width: 200px;
+
+max-height: 400px;
+min-height: 100px;
+```
+
+These are especially useful for responsive webpages.
+
+#### Viewport Units
+
+The viewport is the visible area of the browser window.
+
+```css
+height: 100vh;
+```
+
+`1vh` represents **1% of the viewport height**.
+
+Similarly,
+
+```css
+width: 100vw;
+```
+
+`1vw` represents **1% of the viewport width**.
+
+#### Notes
+
+* Pixels (`px`) provide fixed dimensions.
+* Percentages (`%`) are relative to the parent element.
+* Viewport units (`vh` and `vw`) are relative to the browser window.
+* `box-sizing: border-box` is commonly used in almost every modern website.
+* `min-width`, `max-width`, `min-height`, and `max-height` help create responsive layouts.
+
+### Project Time 🚀
+
+Time to improve the layout of **The Thousand Sunny**.
+
+For this update, I experimented with different display types, resized elements using width and height, and applied `box-sizing: border-box` to simplify layout calculations.
+
+---
+
+### Position
+
+The `position` property determines how an element is positioned on a webpage.
+
+Positioned elements can be moved using the following properties:
+
+```css
+top
+bottom
+left
+right
+```
+
+#### Position Values
+
+1. **`position: static`**
+
+   * Default positioning method.
+   * Elements appear in the normal document flow.
+   * `top`, `bottom`, `left`, and `right` have no effect.
+
+   ```css
+   position: static;
+   ```
+
+2. **`position: relative`**
+
+   * Positions an element relative to its normal position.
+   * The element still occupies its original space in the document.
+   * Can be moved using `top`, `bottom`, `left`, and `right`.
+
+   ```css
+   position: relative;
+   top: 20px;
+   left: 30px;
+   ```
+
+3. **`position: fixed`**
+
+   * Positions an element relative to the browser viewport.
+   * The element remains fixed even while scrolling.
+
+   ```css
+   position: fixed;
+   right: 0;
+   bottom: 20px;
+   ```
+
+   Common uses include floating navigation bars and "Back to Top" buttons.
+
+4. **`position: absolute`**
+
+   * Positions an element relative to its nearest positioned ancestor (an ancestor whose `position` is not `static`).
+   * If no positioned ancestor exists, it is positioned relative to the webpage itself.
+   * Can be freely moved using `top`, `bottom`, `left`, and `right`.
+
+   ```css
+   .parent {
+       position: relative;
+   }
+
+   .child {
+       position: absolute;
+       top: 20px;
+       left: 30px;
+   }
+   ```
+
+   If the parent element moves, the absolutely positioned child moves along with it while maintaining the same position inside the parent.
+
+5. **`position: sticky`**
+
+   * Behaves like a relatively positioned element until a specified scroll position is reached.
+   * Once that point is reached, it sticks to the viewport like a fixed element.
+
+   ```css
+   position: sticky;
+   top: 0;
+   ```
+
+   Commonly used for sticky headers and navigation bars.
+
+#### Notes
+
+* `static` is the default position for all elements.
+* `relative` moves an element from where it would normally appear.
+* `absolute` positions an element relative to its nearest positioned ancestor.
+* `fixed` positions an element relative to the browser window and ignores scrolling.
+* `sticky` combines the behavior of `relative` and `fixed` based on the scroll position.
+* The `top`, `bottom`, `left`, and `right` properties only work with positioned elements (`relative`, `absolute`, `fixed`, and `sticky`).
+
+### Project Time 🚀
+
+Time to experiment with positioning.
+
+For this update, I moved elements using relative positioning, created a floating element using fixed positioning, and explored how absolute positioning works inside a parent container.
+
+---
+
+### Background Images
+
+CSS allows images to be used as the background of an element.
+
+#### Background Image
+
+The `background-image` property sets an image as the background.
+
+```css
+background-image: url("Assets/background.jpg");
+```
+
+#### Background Repeat
+
+If the background image is smaller than the element, it is repeated by default.
+
+```css
+background-repeat: no-repeat;
+```
+
+Common values:
+
+```css
+background-repeat: repeat;
+background-repeat: no-repeat;
+background-repeat: repeat-x;
+background-repeat: repeat-y;
+```
+
+#### Background Position
+
+The `background-position` property determines where the image appears.
+
+```css
+background-position: center;
+```
+
+Other common values:
+
+```css
+background-position: top;
+background-position: bottom;
+background-position: left;
+background-position: right;
+background-position: center;
+```
+
+#### Background Attachment
+
+Determines whether the background moves while scrolling.
+
+```css
+background-attachment: fixed;
+```
+
+Common values:
+
+```css
+background-attachment: fixed;
+background-attachment: scroll;
+```
+
+* `fixed` → Background remains fixed in the viewport.
+* `scroll` → Background moves normally with the page.
+
+#### Background Size
+
+Controls the size of the background image.
+
+```css
+background-size: cover;
+```
+
+Common values:
+
+```css
+background-size: cover;
+background-size: contain;
+background-size: 300px 200px;
+```
+
+* `cover` scales the image to completely cover the element.
+* `contain` scales the image so the entire image remains visible.
+
+#### Notes
+
+* Background images are purely decorative and are different from `<img>` elements.
+* `background-size: cover` is commonly used for hero sections and full-page backgrounds.
+* `background-repeat: no-repeat` is often used together with `background-size: cover`.
+
+---
+
+### Combinators
+
+Combinators describe the relationship between selectors.
+
+#### Descendant Combinator (` `)
+
+Selects elements that are descendants of another element.
+
+```css
+nav a {
+    color: blue;
+}
+```
+
+This selects every `<a>` element inside a `<nav>` element, no matter how deeply nested.
+
+#### Child Combinator (`>`)
+
+Selects only the direct children of an element.
+
+```css
+div > p {
+    color: red;
+}
+```
+
+Only `<p>` elements that are immediate children of a `<div>` are selected.
+
+#### General Sibling Combinator (`~`)
+
+Selects all sibling elements that come after another element.
+
+```css
+h2 ~ p {
+    color: blue;
+}
+```
+
+All `<p>` elements after the `<h2>` (sharing the same parent) are selected.
+
+#### Adjacent Sibling Combinator (`+`)
+
+Selects only the immediately following sibling.
+
+```css
+h2 + p {
+    color: green;
+}
+```
+
+Only the first `<p>` immediately after the `<h2>` is selected.
+
+#### Notes
+
+* Descendant (` `) → Any matching descendant.
+* Child (`>`) → Direct child only.
+* General sibling (`~`) → All following siblings.
+* Adjacent sibling (`+`) → Only the next sibling.
+
+These combinators allow more precise styling without adding extra classes or IDs.
+
+### Project Time 🚀
+
+Time to make **The Thousand Sunny** more immersive.
+
+For this update, I experimented with background images and used combinators to target elements more precisely.
+
+---
+
+### Pseudo Classes
+
+Pseudo classes are keywords added to selectors to style an element based on its current state.
+
+Syntax:
+
+```css
+selector:pseudo-class {
+    /* CSS */
+}
+```
+
+#### Common Pseudo Classes
+
+1. **`:link`**
+
+   Styles links that have not yet been visited.
+
+   ```css
+   a:link {
+       color: cyan;
+   }
+   ```
+
+2. **`:visited`**
+
+   Styles links that have already been visited.
+
+   ```css
+   a:visited {
+       color: purple;
+   }
+   ```
+
+3. **`:hover`**
+
+   Applies styles when the mouse pointer is placed over an element.
+
+   ```css
+   a:hover {
+       color: gold;
+   }
+   ```
+
+4. **`:active`**
+
+   Applies styles while the mouse button is being held down.
+
+   ```css
+   a:active {
+       color: red;
+   }
+   ```
+
+5. **`:not()`**
+
+   Selects every element except the specified one.
+
+   ```css
+   li:not(.captain) {
+       color: white;
+   }
+   ```
+
+6. **`:nth-child()`**
+
+   Selects specific child elements.
+
+   ```css
+   li:nth-child(3)
+   li:nth-child(odd)
+   li:nth-child(even)
+   li:nth-child(3n)
+   ```
+
+   Example:
+
+   ```css
+   li:nth-child(odd) {
+       background-color: #134074;
+   }
+   ```
+
+#### Hover Effects
+
+Pseudo classes can also be used to show or hide elements.
+
+HTML:
+
+```html
+<div class="card">
+    Hover over me!
+    <p class="secret">The One Piece is real!</p>
+</div>
+```
+
+CSS:
+
+```css
+.secret {
+    display: none;
+}
+
+.card:hover .secret {
+    display: block;
+}
+```
+
+The hidden text becomes visible only while the parent element is being hovered.
+
+#### Notes
+
+* Pseudo classes use a **single colon (`:`)**.
+* They style elements based on state rather than structure.
+* `:hover` is commonly used for buttons, navigation menus, and interactive effects.
+* `:nth-child()` is useful for styling alternating rows or list items.
+
+---
+
+### Pseudo Elements
+
+Pseudo elements style a specific part of an element instead of the whole element.
+
+Syntax:
+
+```css
+selector::pseudo-element {
+    /* CSS */
+}
+```
+
+#### Common Pseudo Elements
+
+1. **`::first-letter`**
+
+   Styles the first letter of an element.
+
+   ```css
+   h1::first-letter {
+       color: gold;
+       font-size: 2em;
+   }
+   ```
+
+2. **`::first-line`**
+
+   Styles only the first line of a paragraph.
+
+   ```css
+   p::first-line {
+       font-weight: bold;
+   }
+   ```
+
+3. **`::selection`**
+
+   Styles selected text.
+
+   ```css
+   p::selection {
+       background-color: gold;
+       color: black;
+   }
+   ```
+
+4. **`::before`**
+
+   Inserts content before an element.
+
+   ```css
+   li::before {
+       content: "⭐ ";
+   }
+   ```
+
+5. **`::after`**
+
+   Inserts content after an element.
+
+   ```css
+   li::after {
+       content: " 🏴‍☠️";
+   }
+   ```
+
+6. **`::marker`**
+
+   Styles the bullet or number of list items.
+
+   ```css
+   li::marker {
+       color: gold;
+   }
+   ```
+
+#### Notes
+
+* Pseudo elements use a **double colon (`::`)**.
+* `::before` and `::after` require the `content` property.
+* `::marker` works on list items.
+* `::selection` only appears while text is selected by the user.
+
+### Project Time 🚀
+
+Time to make **The Thousand Sunny** interactive.
+
+For this update, I added hover effects to navigation links, experimented with hidden content that appears on hover, and styled specific parts of text using pseudo elements.
 
 ---

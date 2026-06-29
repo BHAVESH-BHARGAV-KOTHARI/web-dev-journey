@@ -13,11 +13,17 @@
     src: url("Assets/CormorantGaramond-Italic-VariableFont_wght.ttf");
 }
 
+body
+{
+    margin:0;
+    margin-left:5px;
+}
+
 main {
     background-color: #F0FAFA;
     color: #1E4040;
     font-family: Cinzel, serif;
-    margin: 0 auto;          /* centers the main content block */
+    margin: 0 auto;
 }
 
 h1 {
@@ -35,39 +41,43 @@ h1 {
     font-family: Cormorant, serif;
     font-style: italic;
     margin-top: 0;
-    margin-bottom: 8px;
+    margin-bottom: 5px;
 }
 
 header {
     text-transform: uppercase;
     background-color: #C8EEEE;
-    border-bottom: 3px solid #0A7A7A;  /* only bottom border — cleaner look */
-    margin-bottom: 10px;
+    border-bottom: 3px solid #0A7A7A;
     padding: 10px 20px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);  /* shadow below header */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 footer {
     background-color: #C8EEEE;
-    border-top: 3px solid #0A7A7A;    /* mirrors the header */
+    border-top: 3px solid #0A7A7A;
     margin-top: 20px;
     padding: 10px 20px;
-    box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.15);  /* shadow above footer */
+    box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.15);
 }
 
 nav a {
     color: #0A7A7A;
     text-decoration: none;
-    margin-right: 16px;                /* spacing between nav links */
-}
-
-nav a:hover {
-    color: #E8A800;
+    margin-right: 16px;
+    margin-top: 8px;
+    display: inline-block;
+    transition: transform 0.2s ease, color 0.2s ease;
 }
 
 nav a:visited {
-    color: #4A8888;
+    color: #0A7A7A;
 }
+
+nav a:hover {
+    color: #e7a602;
+    transform: scale(1.1);
+}
+
 
 table {
     background: #FFFDF0;
