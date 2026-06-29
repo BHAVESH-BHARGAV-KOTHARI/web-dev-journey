@@ -197,3 +197,85 @@ pre {
     border-radius: 0 8px 8px 0;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
 }
+
+@media (max-width: 600px) {
+    body {
+        margin: 0;
+    }
+
+    header,
+    footer {
+        padding: 10px 14px;
+    }
+
+    main,
+    .music-page main {
+        padding: 14px;
+        border-radius: 0;
+    }
+
+    h1 {
+        font-size: 2rem;
+        line-height: 1.1;
+    }
+
+    .tagline {
+        font-size: 1.05rem;
+    }
+
+    nav a {
+        display: block;
+        margin: 8px 0;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        padding: 8px;
+        font-size: 0.95rem;
+    }
+
+    .hero,
+    .explore li {
+        padding: 14px 16px;
+    }
+
+    .crew-card img,
+    .music-page img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .music-page img {
+        width: 42px;
+    }
+
+    pre {
+        font-size: 1rem;
+        line-height: 1.6;
+        padding-left: 14px;
+        overflow-x: auto;
+    }
+
+    .quote blockquote {
+        font-size: 1.1rem;
+        padding: 10px 14px;
+    }
+
+    .quiz-page button {
+        width: 100%;
+        padding: 10px 14px;
+    }
+
+    .quiz-page p[id^="ans"] {
+        display: block;
+        width: fit-content;
+        max-width: 100%;
+    }
+
+    nav a:hover
+    {
+        transform: translate(3px);
+    }
+
+}

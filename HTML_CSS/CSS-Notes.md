@@ -102,8 +102,55 @@ This way, the website evolves alongside my CSS knowledge and serves as a visual 
 | ::after | `li::after { content: "🏴‍☠️"; }` | Inserts content after an element. |
 | ::marker | `li::marker { }` | Styles list markers. |
 
-
+| text-decoration | `text-decoration: none;` | Removes or styles text decorations such as underlines. |
 ---
+
+### Common CSS Practices
+
+While building webpages, a few CSS rules are used so frequently that they are considered standard practice.
+
+#### `box-sizing: border-box`
+
+By default, an element's specified width and height apply only to its content. Any padding and border increase the final size of the element.
+
+```css
+width: 300px;
+padding: 20px;
+border: 5px solid black;
+```
+
+Actual width:
+
+```text
+300 + 20 + 20 + 5 + 5 = 350px
+```
+
+Using:
+
+```css
+* {
+    box-sizing: border-box;
+}
+```
+
+includes the padding and border within the specified width and height.
+
+This makes layouts much easier to design, especially when using percentages (`%`) for responsive webpages.
+
+#### Removing the Default Body Margin
+
+Browsers apply a default margin to the `<body>` element.
+
+This often creates unwanted white space around the webpage.
+
+It is common practice to remove it at the beginning of a stylesheet.
+
+```css
+body {
+    margin: 0;
+}
+```
+These two rules are among the most common lines found in modern CSS projects.
 
 ## DAY 1
 
@@ -1635,5 +1682,261 @@ selector::pseudo-element {
 Time to make **The Thousand Sunny** interactive.
 
 For this update, I added hover effects to navigation links, experimented with hidden content that appears on hover, and styled specific parts of text using pseudo elements.
+
+---
+
+## DAY 6
+
+### Pagination
+
+Pagination is used to divide content into multiple pages, making a website easier to navigate.
+
+A common approach is to create a container for the page links.
+
+HTML:
+
+```html
+<div class="pagination">
+    <a href="page1.html">&laquo;</a>
+    <a href="page1.html" class="active">1</a>
+    <a href="page2.html">2</a>
+    <a href="page3.html">3</a>
+    <a href="page2.html">&raquo;</a>
+</div>
+```
+
+The `active` class is used to indicate the currently selected page.
+
+#### Styling Pagination
+
+The page links are usually displayed as inline blocks so that they appear side by side while still allowing width, height, and padding to be applied.
+
+```css
+.pagination a {
+    display: inline-block;
+    padding: 10px 16px;
+    text-decoration: none;
+}
+```
+
+The active page can be highlighted.
+
+```css
+.pagination a.active {
+    background-color: #F4C430;
+    color: black;
+}
+```
+
+Hover effects can improve the user experience.
+
+```css
+.pagination a:hover:not(.active) {
+    background-color: #4FC3F7;
+    color: white;
+}
+```
+
+Rounded corners can also be added.
+
+```css
+.pagination a {
+    border-radius: 5px;
+}
+```
+
+#### Notes
+
+* Pagination makes large websites easier to browse.
+* The current page is commonly highlighted using an `active` class.
+* `display: inline-block` allows page links to sit on the same line while supporting width, height, padding, and margins.
+* `:hover:not(.active)` prevents the active page from changing appearance when hovered.
+* Pagination is commonly placed at the bottom of articles, blogs, image galleries, and search results.
+
+---
+
+### Dropdown Menus
+
+Dropdown menus are commonly used to organize navigation links and save space on a webpage.
+
+A dropdown consists of a parent container, a button, and a hidden content section that becomes visible when the user hovers over the parent.
+
+#### HTML Structure
+
+```html
+<div class="dropdown">
+
+    <button>Menu</button>
+
+    <div class="content">
+        <a href="">Home</a>
+        <a href="">Crew</a>
+        <a href="">Gallery</a>
+        <a href="">Contact</a>
+    </div>
+
+</div>
+```
+
+#### Styling the Links
+
+The links are usually displayed as block elements so that each link occupies an entire row.
+
+```css
+.dropdown a {
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+}
+```
+
+#### Hiding the Menu
+
+Initially, the dropdown content is hidden.
+
+```css
+.dropdown .content {
+    display: none;
+}
+```
+
+The content is commonly positioned absolutely so that it appears below the button without affecting the rest of the page layout.
+
+```css
+.dropdown .content {
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+}
+```
+
+Additional styling such as borders, shadows, and rounded corners can also be added.
+
+#### Displaying the Menu
+
+The dropdown becomes visible when the user hovers over the parent container.
+
+```css
+.dropdown:hover .content {
+    display: block;
+}
+```
+
+#### Hover Effects
+
+Hover effects can also be applied to individual links.
+
+```css
+.dropdown a:hover {
+    background-color: #4FC3F7;
+    color: white;
+}
+```
+
+The button itself can also change appearance when hovered.
+
+```css
+.dropdown:hover button {
+    background-color: #F4C430;
+}
+```
+
+#### Notes
+
+* `display: none` hides the dropdown content until needed.
+* `position: absolute` allows the dropdown menu to appear without pushing other elements down.
+* `display: block` makes each link occupy its own line.
+* Dropdown menus are created using HTML and CSS—JavaScript is not required for simple hover-based menus.
+* More advanced dropdowns (click-to-open, nested menus, animations) are usually implemented using JavaScript.
+
+### Responsive Website Layout
+
+Webpages may look different on devices with different screen sizes.
+
+A layout designed for a desktop monitor may not look good on tablets or mobile phones. CSS allows us to apply different styles based on the screen size using **media queries**.
+
+#### Media Queries
+
+A media query applies CSS rules only when certain conditions are satisfied.
+
+Example:
+
+```css
+@media screen and (max-width: 600px) {
+
+    body {
+        background-color: lightblue;
+    }
+
+}
+```
+
+In this example, the CSS rules inside the media query are applied only when the screen width is **600px or smaller**.
+
+#### Common Media Query Conditions
+
+**Maximum Width**
+
+```css
+@media screen and (max-width: 600px) {
+
+}
+```
+
+Applied when the screen width is **less than or equal to 600px**.
+
+**Minimum Width**
+
+```css
+@media screen and (min-width: 600px) {
+
+}
+```
+
+Applied when the screen width is **greater than or equal to 600px**.
+
+#### Common Uses
+
+Media queries are commonly used to:
+
+* Resize text for smaller screens.
+* Rearrange layouts.
+* Resize images.
+* Adjust spacing and margins.
+* Improve navigation on mobile devices.
+* Hide or display certain elements.
+
+#### Example
+
+```css
+@media screen and (max-width: 600px) {
+
+    nav a {
+        display: block;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+}
+```
+On smaller screens:
+
+* Navigation links appear one below another.
+* The heading size is reduced.
+
+#### Notes
+
+* Media queries are an essential part of responsive web design.
+* CSS inside a media query only applies when its condition is satisfied.
+* Desktop styles are usually written first, with media queries overriding them for smaller devices.
+* Multiple media queries can be used for different screen sizes.
+
+### Project Time 🚀
+
+Time to prepare **The Thousand Sunny** for every pirate.
+
+For this update, I experimented with media queries to make the website adapt better to smaller screens and improve the mobile browsing experience.
 
 ---
