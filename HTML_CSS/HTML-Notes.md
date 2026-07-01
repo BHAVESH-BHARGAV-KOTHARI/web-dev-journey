@@ -233,13 +233,6 @@ To get started with the HTML code, we can just time '!' in vscode and then hit "
 - In VS Code, typing `lorem` and pressing `Tab` generates dummy placeholder text (Lorem Ipsum).
 - Useful for quickly filling a webpage with sample content during development.
 
-### Project Time 🚀
-
-This concludes the introduction to HTML. Time to build something.
-I have decided to create a **One Piece-themed webpage** and apply the concepts learned so far. Let's see how this turns out.
-
-Website name is **"The Thousand Sunny"**.
-
 ---
 
 ## DAY 2
@@ -316,17 +309,6 @@ When clicked, the user's email client opens with the recipient's email address a
 - `file:///...` links work only on your local machine and cannot be used to share websites with others.
 - To share a website publicly, host it online (e.g., GitHub Pages) and use its URL.
 
-### Project Time 🚀
-
-So, now that I have learned about hyperlinks, I will try to connect the pages within my website and turn **The Thousand Sunny** into a proper multi-page website.
-
-Current pages:
-
-- The Crew Deck
-- Music Room
-- Quiz Arena
-- Fan Mail Office
-
 ---
 
 ### Images
@@ -379,18 +361,6 @@ GIFs can also be displayed using the `<img>` tag.
 ```html
 <img src="luffy.gif" alt="Luffy GIF">
 ```
-
-### Project Time 🚀
-
-Now that I have learned about images, I'll try to use them in my website.
-
-The best page to test this on is **The Crew Deck**, where I'll be:
-
-- Adding images of the Straw Hat Pirates.
-- Writing short descriptions for each crew member.
-- Learning how image sizing and alternative text work in practice.
-
-**Note:** I tried placing the crew descriptions beside their images, but I discovered that basic HTML is not well-suited for controlling page layouts. For now, the text will remain below the images. I'll revisit and improve the layout after learning CSS.
 
 ---
 
@@ -511,10 +481,6 @@ Unlike paragraph tags (`<p>`), these elements do not necessarily start on a new 
 
 More advanced control over page layouts is typically achieved using CSS.
 
-### Project Time 🚀
-
-Time to build our 'Music Room' webpage, we will be adding the audio file, and a small image of brook (as a album cover) and also lyrics using our `<pre></pre>` tag, so that the viewers can sing along.
-
 ---
 
 ### Videos
@@ -627,14 +593,6 @@ Videos can also be used as hyperlinks by wrapping the `<video>` tag inside an an
 - `controls`, `autoplay`, `muted`, `loop`, fallback sources, and MIME types work in a similar manner.
 - Relative paths are preferred over absolute file paths.
 
-### Project Time 🚀
-
-No changes will be made to **The Thousand Sunny** project for this section.
-
-The concepts learned for videos are largely identical to those used for audio, and adding copyrighted anime clips or episodes may introduce copyright concerns when publishing the project.
-
-For now, I will move on to the next topic and revisit videos later if needed.
-
 ---
 
 ## DAY 3
@@ -688,10 +646,6 @@ href="Assets/favicon.png"
 - Browsers may cache favicons aggressively, so changes may not appear immediately after updating the image.
 - The traditional favicon format is `.ico`, but modern browsers also support `.png`, `.jpg`, `.gif`, and `.svg` files.
 - Animated GIF favicons are supported by some browsers, but support is not guaranteed across all browsers.
-
-### Project Time 🚀
-
-Nothing much... just find some good icons for my webpages and gonna add them.
 
 ---
 
@@ -846,10 +800,6 @@ Other examples:
 - Some tags such as `<big>` and `<tt>` are considered obsolete in modern HTML.
 - CSS is generally preferred for controlling appearance, but basic formatting tags are still useful and commonly encountered.
 
-### Project Time 🚀
-
-Not much here either, [There isn't even much text to begin with]. Maybe for now I'll just sprinkle some formatting a bit.
-
 ---
 
 ### Span & Div
@@ -940,14 +890,6 @@ Example:
 - Use `<span>` for styling part of a line.
 - Use `<div>` for styling an entire section.
 - Lists, paragraphs, headings, and other block elements should generally be placed inside `<div>`, not `<span>`.
-
-### Project Time 🚀
-
-No changes will be made to **The Thousand Sunny** project for this section.
-
-While `<span>` and `<div>` are extremely useful, their real power comes from CSS. At this stage, adding them to the project would not provide much benefit and may even make the code unnecessarily cluttered.
-
-I will revisit these tags after learning CSS and use them to improve the website's layout and styling.
 
 ---
 
@@ -1049,10 +991,6 @@ Nested lists are supported for both ordered and unordered lists.
 - `<dl>` lists use `<dt>` and `<dd>` instead of `<li>`.
 - Lists can be nested to create subcategories.
 - Lists are commonly used for navigation menus, item collections, and structured information.
-
-### Project Time 🚀
-
-Just added a bit of unordered lists in the 'crew' page.
 
 ---
 
@@ -1216,12 +1154,6 @@ This allows tables to be used for more complex layouts.
 - Tables are best used for tabular data.
 - Modern websites generally use CSS for layouts instead of tables.
 
-### Project Time 🚀
-
-Finally some major improment to the website...
-
-One possible improvement for **The Crew Deck** page is to place each crew member's wanted poster in one column and their description in another. This would allow the text to appear beside the image instead of below it.
-
 ---
 
 ### Buttons
@@ -1368,14 +1300,6 @@ This replaces the existing text with the new text.
 - The `id` attribute uniquely identifies an element on the page.
 - `innerHTML` can be used to modify the content of an HTML element using JavaScript.
 - We can also use images inside buttons.
-
-### Project Time 🚀
-
-It's finally time to build the **Quiz Arena** page.
-
-I'll create a small One Piece quiz and use buttons for the answer choices. When a button is clicked, JavaScript will determine whether the answer is correct and display the appropriate message.
-
-This will be my first time adding actual interactivity to **The Thousand Sunny** website.
 
 Also for project part, I had to look a bit more into JS to simplify things, here are the extended notes:
 
@@ -1731,24 +1655,6 @@ accept=".jpg,.png"
 accept="image/*"
 ```
 
-### Project Time 🚀
-
-It's time to complete the final page of **The Thousand Sunny** website.
-
-For the Fan Mail Office, I will create a form where visitors can share information about themselves and their One Piece preferences.
-
-The form will collect:
-
-- Basic user information
-- Favorite Straw Hat Pirate
-- Favorite Arc
-- Favorite Characters
-- One Piece rating
-- Review
-and many more!!!
-
-This project will help me practice a variety of HTML form elements while creating a page that feels like a natural part of the website.
-
 ---
 
 ## DAY 7
@@ -1854,20 +1760,6 @@ The `<nav>` tag helps organize navigation sections and makes the purpose of the 
 - They help organize webpages into meaningful sections.
 - They make code easier to read and maintain.
 - CSS can be applied to these tags just like any other HTML element.
-
-### Project Time 🚀
-
-To conclude the HTML section, I will update **The Thousand Sunny** website to use semantic HTML.
-
-The homepage and other pages will be reorganized using:
-
-- `<header>` for titles and introductory content
-- `<main>` for the primary page content
-- `<footer>` for navigation links, credits, and closing information
-
-This will improve the structure and readability of the code while preparing the project for future CSS styling.
-
-With this update, the HTML portion of **The Thousand Sunny** project is complete.
 
 ---
 

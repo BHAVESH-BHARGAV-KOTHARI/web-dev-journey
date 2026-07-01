@@ -305,12 +305,6 @@ Descendant selectors allow more precise styling without creating extra classes o
 4. A single change in the stylesheet can update the design of an entire website.
 5. Separates structure (HTML) from presentation (CSS).
 
-### Project Time 🚀
-
-This concludes the introduction to CSS. Time to start styling **The Thousand Sunny** website.
-
-The first task is to create an external stylesheet and connect it to the webpage.
-
 ---
 
 ## DAY 2
@@ -517,12 +511,6 @@ h1 {
 * Different font files require different `@font-face` declarations.
 * Common font formats include `.ttf`, `.otf`, `.woff`, and `.woff2`.
 
-### Project Time 🚀
-
-Time to give **The Thousand Sunny** some personality.
-
-For this update, I connected a stylesheet to all webpages, experimented with colors, and started styling text using different fonts.
-
 ---
 
 ## DAY 3
@@ -611,12 +599,6 @@ border-left: 3px solid gold;
 border-right: 3px solid gold;
 ```
 
-### Project Time 🚀
-
-Time to decorate **The Thousand Sunny**.
-
-For this update, I experimented with different border styles and added borders around sections of the webpage.
-
 ---
 
 ### Shadows
@@ -696,12 +678,6 @@ box-shadow: horizontal-offset vertical-offset blur-radius color;
 * Box shadows work on most elements, not just `<div>`.
 * Often used to create depth and make elements appear elevated.
 * Negative offsets can be used to place shadows above or to the left.
-
-### Project Time 🚀
-
-Time to make the ship stand out.
-
-For this update, I added shadows to headings and experimented with box shadows to create depth.
 
 ---
 
@@ -834,12 +810,6 @@ Top → Right → Bottom → Left
 Padding increases the distance between content and the border, and background colors extend into the padding area. Unlike margins, padding cannot be set to `auto`.
 
 Padding is commonly used to make buttons, cards, navigation bars, and sections look less cramped.
-
-### Project Time 🚀
-
-Time to give the crew some breathing room.
-
-For this update, I used margins to separate sections and improve the overall layout of **The Thousand Sunny** website.
 
 ---
 
@@ -1207,12 +1177,6 @@ width: 100vw;
 * `box-sizing: border-box` is commonly used in almost every modern website.
 * `min-width`, `max-width`, `min-height`, and `max-height` help create responsive layouts.
 
-### Project Time 🚀
-
-Time to improve the layout of **The Thousand Sunny**.
-
-For this update, I experimented with different display types, resized elements using width and height, and applied `box-sizing: border-box` to simplify layout calculations.
-
 ---
 
 ### Position
@@ -1305,12 +1269,6 @@ right
 * `fixed` positions an element relative to the browser window and ignores scrolling.
 * `sticky` combines the behavior of `relative` and `fixed` based on the scroll position.
 * The `top`, `bottom`, `left`, and `right` properties only work with positioned elements (`relative`, `absolute`, `fixed`, and `sticky`).
-
-### Project Time 🚀
-
-Time to experiment with positioning.
-
-For this update, I moved elements using relative positioning, created a floating element using fixed positioning, and explored how absolute positioning works inside a parent container.
 
 ---
 
@@ -1466,12 +1424,6 @@ Only the first `<p>` immediately after the `<h2>` is selected.
 * Adjacent sibling (`+`) → Only the next sibling.
 
 These combinators allow more precise styling without adding extra classes or IDs.
-
-### Project Time 🚀
-
-Time to make **The Thousand Sunny** more immersive.
-
-For this update, I experimented with background images and used combinators to target elements more precisely.
 
 ---
 
@@ -1676,12 +1628,6 @@ selector::pseudo-element {
 * `::before` and `::after` require the `content` property.
 * `::marker` works on list items.
 * `::selection` only appears while text is selected by the user.
-
-### Project Time 🚀
-
-Time to make **The Thousand Sunny** interactive.
-
-For this update, I added hover effects to navigation links, experimented with hidden content that appears on hover, and styled specific parts of text using pseudo elements.
 
 ---
 
@@ -1932,11 +1878,5 @@ On smaller screens:
 * CSS inside a media query only applies when its condition is satisfied.
 * Desktop styles are usually written first, with media queries overriding them for smaller devices.
 * Multiple media queries can be used for different screen sizes.
-
-### Project Time 🚀
-
-Time to prepare **The Thousand Sunny** for every pirate.
-
-For this update, I experimented with media queries to make the website adapt better to smaller screens and improve the mobile browsing experience.
 
 ---
