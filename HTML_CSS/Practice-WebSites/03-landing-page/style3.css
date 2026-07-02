@@ -1,0 +1,93 @@
+.hero
+{
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  height: 83vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  color:aliceblue;
+  font-size: 25px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.custom-btn 
+{
+  background-color: #7bc0d3; 
+  color: #0a1923;
+  border: none;
+
+  padding: 20px 20px;
+  font-size: 30px;
+  font-weight: 600;
+
+  border-radius: 60px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+.custom-btn:hover {
+  background-color: #5fa9bc;
+}
+
+header
+{
+  display: flex;
+  justify-content: space-between;
+  background-color: #1a1c1e;
+  color: rgba(192, 185, 185, 0.716);
+  height: 45px;
+  padding: 20px;
+  border: 1px solid rgb(57, 58, 58);
+  font-size: 20px;
+  align-items: center;
+}
+
+header a
+{
+  color: rgb(242, 236, 236);
+  padding: 5px;
+  text-decoration: none;
+}
+
+footer
+{
+  background-color: rgb(29, 28, 28);
+  color: white;
+  height: 40px;
+  padding:5px;
+  border: 1px solid rgb(71, 75, 72);
+  text-align: center;
+}
+
+h1
+{
+  font-size:90px;
+  margin: 0px;
+}
+
+.logo
+{
+  padding-left: 30px;
+  font-size: 30px;
+}
+
+body {
+  margin: 0;
+  padding: 0; /* Keeps things perfectly clean across browsers */
+  background-color: #111; /* Gives the body a dark theme background color */
+}
+
+img
+{
+  height:20px;
+  width:20px;
+}
+

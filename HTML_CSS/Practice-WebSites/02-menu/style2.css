@@ -1,0 +1,70 @@
+body {
+  background-color: rgb(249, 236, 216);
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.title h1 {
+  margin-bottom: 5px;
+  color: #000000;
+  font-size: 50px;
+  font-family:'Times New Roman', Times, serif
+}
+
+.title h3 {
+  margin-top: 0;
+  color: #8c6239;
+}
+
+.title {
+  text-align: center;
+  margin-top: 150px;
+  margin-bottom: 0px;
+}
+
+.page {
+  display: flex;
+  justify-content: center; 
+  gap: 40px;              
+  margin-top: 30px;
+  padding: 20px;
+}
+
+.category {
+  background-color: white;
+  padding: 25px;
+  border: 2px solid rgb(242, 229, 229);
+  border-radius: 8px;
+  box-shadow: 5px 15px 15px rgba(0, 0, 0, 0.1);
+  width: 280px;
+}
+
+.category h2 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td {
+  padding: 12px 0;
+  border-bottom: 2px dotted #b5a48c;
+  vertical-align: bottom;
+}
+
+td:last-child {
+  text-align: right;
+  font-weight: bold;
+  color: #8c6239;
+  padding-left: 10px;
+}
+
+/* Remove the line under the very last item */
+tr:last-child td {
+  border-bottom: none;
+}
