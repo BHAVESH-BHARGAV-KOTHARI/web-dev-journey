@@ -31,3 +31,27 @@ For each challenge:
 | Reference | My Recreation |
 |-----------|----------------|
 | <img src="images/03-reference.png" width="400"> | <img src="images/03-recreated.png" width="400"> |
+
+---
+
+## 4. Sign-Up Page
+
+| Reference | My Recreation |
+|-----------|----------------|
+| <img src="images/04-reference.png" width="400"> | <img src="images/04-recreated.png" width="400"> |
+
+---
+
+## 5. Blog Article Page
+
+| Reference | My Recreation |
+|-----------|----------------|
+| <img src="images/05-reference.png" width="400"> | <img src="images/05-recreated.png" width="400"> |
+
+---
+
+## 6. Pricing Page
+
+| Reference | My Recreation |
+|-----------|----------------|
+| <img src="images/06-reference.png" width="400"> | <img src="images/06-recreated.png" width="400"> |

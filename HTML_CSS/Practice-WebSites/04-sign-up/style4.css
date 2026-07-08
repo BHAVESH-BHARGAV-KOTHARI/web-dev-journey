@@ -1,0 +1,94 @@
+body
+{
+  background-color: rgb(226, 237, 237);
+}
+
+.login-box
+{
+  background-color:white;
+  height:auto;
+  width:340px;
+
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform: translate(-50%,-50%);
+  padding:20px;
+  border-radius: 12px;
+  text-align:center;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+
+}
+
+#logo
+{
+  height:35px;
+  width:45px;
+}
+
+label
+{
+  display:block;
+  font-size:12px;
+  font-weight:bold;
+  margin-top:15px;
+  margin-bottom:5px;
+  text-align:left;
+}
+
+.in
+{
+  display:block;
+  width:100%;
+  box-sizing: border-box;
+  padding:5px;
+  border:1px solid #ccc;
+  border-radius:6px;
+  background-color: #f9f9f9;
+}
+
+.in:focus
+{
+  border-color: #7bc0d3;
+  box-shadow: 0 0 8px rgba(123, 192, 211, 0.6);
+  background-color: #fff;
+}
+
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.checkbox-row label {
+  display: inline;     
+  margin: 0;           
+  font-size: 13px;
+  font-weight: normal;
+  color: #666;
+}
+
+.custom-btn 
+{
+  background-color: #7bc0d3; 
+  color: #0a1923;
+  border: none;
+
+  width:300px;
+
+  padding: 10px 10px;
+  font-size: 20px;
+  font-weight: 600;
+
+  border-radius: 60px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  margin-top:25px;
+
+}
+
+.custom-btn:hover {
+  background-color: #5fa9bc;
+}
